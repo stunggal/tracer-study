@@ -14,13 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard.index');
+    return view('dashboard.index', [
+        'title' => 'Dashboard',
+    ]);
 });
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/form_tracer', function () {
-    return view('form_tracer.index');
+Route::get('/kuisioner', function () {
+    return view('kuisioner.index', [
+        'title' => 'Kuisioner',
+    ]);
 });
