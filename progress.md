@@ -53,15 +53,15 @@ email
 #section 2 
 - status saat ini(done)
     - aktif dalam mencari pekerjaan dalam 4 minggu kedepan (done)
-- mendapatkan pekerjaan pertama
-- berapa bulan menunggu untuk mendapatkan pekerjaan pertama termasuk bekerja sebelum lulus
-- rata-rata pendapatan setiap bulannya
-- Apakah profesi saat ini
-    - Bila seorang wiraswasta, apa posisi/jabatan pada saat ini
-- Bila mengambil studi lanjut, sebutkan sumber dana pembiayaan kuliah
-    - Sebutkan nama Perguruan Tinggi tempat studi lanjut
-    - Sebutkan program studi lanjutnya 
-- Sebutkan sumber dana dalam pembiayaan kuliah? (bukan ketika Studi Lanjut)
+- mendapatkan pekerjaan pertama (DONE)
+- berapa bulan menunggu untuk mendapatkan pekerjaan pertama termasuk bekerja sebelum lulus (DONE)
+- rata-rata pendapatan setiap bulannya  (DONE)
+- Apakah profesi saat ini (DONE)
+    - Bila seorang wiraswasta, apa posisi/jabatan pada saat ini (dalam view personal)
+- Bila mengambil studi lanjut, sebutkan sumber dana pembiayaan kuliah (dalam view personal)
+    - Sebutkan nama Perguruan Tinggi tempat studi lanjut (dalam view personal)
+    - Sebutkan program studi lanjutnya (dalam view personal)
+- Sebutkan sumber dana dalam pembiayaan kuliah? (bukan ketika Studi Lanjut) (dalam view personal)
 #section 3
 - nama instansi bekerja
 - lokasi bekerja
