@@ -28,3 +28,9 @@ Route::get('/kuisioner', function () {
         'title' => 'Kuisioner',
     ]);
 });
+
+Route::get('/master-kuisioner', function () {
+    return view('kuisioner.master', [
+        'title' => 'Master Kuisioner',
+    ]);
+});

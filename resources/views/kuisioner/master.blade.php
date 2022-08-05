@@ -33,7 +33,7 @@
                 <div class="col-xxl-4 col-md-6">
                     <div class="card info-card sales-card">
                         <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>| Jumlah sudah diisi</span></h5>
+                            <h5 class="card-title">Kuisioner <span>| Jumlah Aktif</span></h5>
 
                             <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -54,7 +54,7 @@
                 <div class="col-xxl-4 col-md-6">
                     <div class="card info-card sales-card">
                         <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>| Jumlah belum diisi</span></h5>
+                            <h5 class="card-title">Kuisioner <span>| Jumlah Draft/Non Aktif</span></h5>
 
                             <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -84,8 +84,8 @@
                                     <h6>Filter</h6>
                                 </li>
 
-                                <li><a class="dropdown-item" href="#">Done</a></li>
-                                <li><a class="dropdown-item" href="#">Available</a></li>
+                                <li><a class="dropdown-item" href="#">Active</a></li>
+                                <li><a class="dropdown-item" href="#">Non Active</a></li>
                             </ul>
                         </div>
 
@@ -93,6 +93,9 @@
                             <h5 class="card-title">Kuisioner <span>/ Mari kita isi kuisioner tracer studi untuk menuju unida unggul 2025</span></h5>
 
                             <div class="container">
+
+                                <a href="#" class="btn btn-primary rounded-pill bg-primary p-2 ms-2 mb-3">Buat Kuisioner</a>
+
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="card">
@@ -135,6 +138,8 @@
                     </div>
                 </div><!-- End Reports -->
 
+                
+
 
             </div>
         </div><!-- End Left side columns -->
@@ -142,63 +147,46 @@
         <!-- Right side columns -->
         <div class="col-lg-4">
 
-            <!-- News & Updates Traffic -->
-            <div class="card">
-                    <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                                <h6>Filter</h6>
-                            </li>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Status</h5>
 
-                            <li><a class="dropdown-item" href="#">Today</a></li>
-                            <li><a class="dropdown-item" href="#">This Month</a></li>
-                            <li><a class="dropdown-item" href="#">This Year</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
-
-                        <div class="news">
-                            <div class="post-item clearfix">
-                                <img src="assets/img/news-1.jpg" alt="">
-                                <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                                <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="assets/img/news-2.jpg" alt="">
-                                <h4><a href="#">Quidem autem et impedit</a></h4>
-                                <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...
-                                </p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="assets/img/news-3.jpg" alt="">
-                                <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-                                <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...
-                                </p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="assets/img/news-4.jpg" alt="">
-                                <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-                                <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...
-                                </p>
-                            </div>
-
-                            <div class="post-item clearfix">
-                                <img src="assets/img/news-5.jpg" alt="">
-                                <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-                                <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos
-                                    eius...</p>
-                            </div>
-
-                        </div><!-- End sidebar recent posts-->
+                        <!-- Pie Chart -->
+                        <canvas id="pieChart" style="max-height: 400px;"></canvas>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new Chart(document.querySelector('#pieChart'), {
+                                    type: 'pie',
+                                    data: {
+                                        labels: [
+                                            'Bekerja (full-time / part-time)',
+                                            'wiraswasta',
+                                            'melanjutkan pendidikan',
+                                            'tidak kerja tetapi sedang mencari kerja',
+                                            'belum memungkinkan bekerja',
+                                        ],
+                                        datasets: [{
+                                            label: 'My First Dataset',
+                                            data: [300, 50, 100, 40, 120],
+                                            backgroundColor: [
+                                                'rgb(0, 204, 102)',
+                                                'rgb(102, 102, 255)',
+                                                'rgb(255, 255, 102)',
+                                                'rgb(255, 102, 102)',
+                                                'rgb(255, 102, 255)',
+                                            ],
+                                            hoverOffset: 4
+                                        }]
+                                    }
+                                });
+                            });
+                        </script>
+                        <!-- End Pie CHart -->
 
                     </div>
-                </div><!-- End News & Updates -->
+                </div>
+            </div>
 
         </div><!-- End Right side columns -->
 
