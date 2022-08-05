@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="index.html">
+            <a class="nav-link {{ ($title === 'Dashboard') ? '' : 'collapsed' }}" href="/">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -24,7 +24,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/form_tracer">
+            <a class="nav-link {{ ($title === 'Kuisioner') ? '' : 'collapsed' }}" href="/kuisioner">
                 <i class="bi bi-book"></i>
                 <span>Kuisioner</span>
             </a>
