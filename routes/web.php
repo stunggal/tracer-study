@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard.index');
 });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/form_tracer', function () {
+    return view('form_tracer.index');
+});
