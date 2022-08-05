@@ -30,6 +30,19 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link {{ ($title === 'Master Kuisioner') ? '' : 'collapsed' }}" data-bs-target="#forms-master" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-kanban"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="forms-master" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/master-kuisioner">
+                        <i class="bi bi-chevron-right"></i><span>Manage Kuisioner</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
     </ul>
 </aside>
 <!-- End Sidebar-->
