@@ -185,7 +185,7 @@
 
     </header><!-- End Header -->
 
-    @include('layouts.sidebar')
+    @yield('sidebar')
 
 
 
