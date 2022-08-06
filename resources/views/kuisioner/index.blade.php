@@ -126,7 +126,8 @@
                                             <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Kuisioner: Direct supervisor contact information</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <p class="card-text">Berikut merupakan kuesioner terkait dengan atasan langsung di tempat anda bekerja/berkhidmah saat ini. Jika Anda tidak memiliki atasan langsung (misal anda wirausahawan dll), maka tokoh masyarakat yang ada di wilayah Anda dapat menilai kapasitas Anda. Jika anda seorang ibu rumah tangga, maka suami anda sebagai atasan anda. Jika anda studi lanjut/beasiswa maka kaprodi/dekan anda sebagai atasan anda.</p>
+                                                
                                                 <a href="/quiz-3" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
                                             </div>
                                         </div>
