@@ -40,14 +40,14 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
                                             Propinsi
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
                                             Kabupaten/Kota
                                         </label>
@@ -66,21 +66,21 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
                                             Lokal/ Wilayah/ Wirausaha tidak berbadan hukum
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
                                             Nasional/ Wirausaha berbadan hukum
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
                                             Internasional
                                         </label>
