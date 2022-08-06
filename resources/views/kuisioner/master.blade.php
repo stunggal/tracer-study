@@ -99,38 +99,18 @@
 
                             <div class="container">
 
-                                <a href="#" class="btn btn-primary rounded-pill bg-primary p-2 ms-2 mb-3">Buat Kuisioner</a>
+                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1 mb-3 ">Buat Kuisioner</a>
 
                                 <div class="row">
+                                    
                                     <div class="col-sm-4">
                                         <div class="card">
                                             <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">Kuisioner Penilaian Dosen</h5>
                                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary rounded-pill bg-primary p-2 ms-2">Go somewhere</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner Fasilitas Kampus</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary rounded-pill bg-primary p-2 ms-2">Go somewhere</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner relevansi pelajaran dengan pekerjaan</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary rounded-pill bg-primary p-2 ms-2">Go somewhere</a>
+                                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1">View</a>
+                                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1">Edit</a>
                                             </div>
                                         </div>
                                     </div>

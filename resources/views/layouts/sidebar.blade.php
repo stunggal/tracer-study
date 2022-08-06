@@ -40,6 +40,11 @@
                         <i class="bi bi-chevron-right"></i><span>Manage Kuisioner</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/">
+                        <i class="bi bi-chevron-right"></i><span>Manage Dashboard</span>
+                    </a>
+                </li>
             </ul>
         </li>
 
