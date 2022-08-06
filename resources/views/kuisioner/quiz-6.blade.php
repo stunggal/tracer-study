@@ -20,70 +20,57 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Sangat relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Kurang relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Tidak relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Sebutkan kegiatan akademik/non akademik universitas yang paling berpengaruh pada pekerjaan Anda saat ini? (min 3)</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                        Perkuliahan
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                        Praktikum/Penelitian
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                        Pengabdian Masyarakat
                                         </label>
-                                        <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                        Diskusi Islamisasi
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                        Tahfizh al Qur'an
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                        Kegiatan Kebahasaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                        UKM
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
@@ -102,7 +89,24 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Bila memilih perkuliahan, mata kuliah apa yang paling dibutuhkan oleh pekerjaan Anda saat ini ? (min 3)</div>
+                                <div class="card-body mt-3">
+                                    <input type="hidden" name="questions" value="">
+                                    
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
+                                        <strong></strong>
+                                    </span>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card mb-3">
+                                <div class="card-header">Menurut Anda, apakah kurikulum program studi Anda sudah  memenuhi kebutuhan dunia kerja dan pengabdian? (Mohon berikan penjelasan)</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
@@ -118,65 +122,12 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Silakan beri saran atau masukan untuk pengembangan kurikulum program studi Anda</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
-
+                                    
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
-                                            Example checkbox
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                        <label class="form-check-label" for="gridCheck2">
-                                            Example checkbox 2
-                                        </label>
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div>
-                                        <!-- <label for="customRange2" class="form-label"> -->
-                                            <table style="width:123%">
-                                                <tr >
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
-                                                    <th>4</th>
-                                                    <th>5</th>
-                                                </tr>
-                                            </table>
-                                        <!-- </label> -->
-                                        <input type="range" class="form-range" min="1" max="5" step="1" id="customRange2">
+                                        <textarea class="form-control" style="height: 100px"></textarea>
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
@@ -193,6 +144,8 @@
                                     </button>
                                 </div>
                             </div>
+
+
                         </form>
 
                     </div>

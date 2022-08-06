@@ -20,34 +20,34 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Ketika anda mendapat tawaran pekerjaan yang tidak sesuai dengan orientasi UNIDA Gontor (misalnya: pramugari/a, bank/asuransi konvensional, model, debt colector, operator game online)</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
                                     <div class="form-check">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            Saya akan mengambilnya, toh tidak ada orang UNIDA yang memantau dan mempermasalahkan itu.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            Saya akan mengambilnya, toh tidak ada orang UNIDA yang memantau dan mempermasalahkan itu.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                            Saya akan mengambilnya, toh tidak ada orang UNIDA yang memantau dan mempermasalahkan itu.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check">
                                         <label class="form-check-label" for="option-">
-                                            Tidak relevan
+                                            Saya akan menghindarinya, lebih baik keluarga saya mati kelaparan daripada harus bekerja seperti itu.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
@@ -61,122 +61,77 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Apabila diundang untuk mengisi acara perayaan hari besar agama lain, apa yang anda lakukan?</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            Saya menerima dan saya siap, demi terciptanya pluralisme agama yang baik dan kondusif di Indonesia.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            Saya tetap mengisi dengan semangat. Karena siapa tahu Islam dapat didakwahkan melalui cara itu.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                            Saya menerima tawaran tersebut. Namun saya akan menyampaikan permohonan maaf dan menyatakan berhalangan hadir.
                                         </label>
                                         <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Other : <input type="text" name="other_reason" />
+                                            Saya menolak dengan keras.
+                                        </label>
+                                        <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
+                                        <strong></strong>
+                                    </span>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card mb-3">
+                                <div class="card-header">Fenomena LGBT saat ini mulai marak. Bahkan Asosiasi Psikolog Amerika menyatakan bahwa LGBT bukan penyakit jiwa atau mental. </div>
+                                <div class="card-body mt-3">
+                                    <input type="hidden" name="questions" value="">
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Seharusnya, kita perlu menerima dan setuju dengan keberadaan LGBT itu. Karena mereka juga sesama manusia yang memiliki hak untuk dihormati. Bahkan kita perlu protes jika ada orang yang mengkritiknya.
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" style="height: 100px"></textarea>
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
-                                            Example checkbox
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            LGBT bisa diterima di Indonesia, bahkan juga di pesantren. Toh nanti mereka akan sembuh dengan sendirinya.
                                         </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                        <label class="form-check-label" for="gridCheck2">
-                                            Example checkbox 2
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Kita menolak untuk menjadi LGBT dan menjadikan orang pro LGBT. Tetapi kita tetap perlu membantu LGBT untuk bisa dinormalisasi, ini butuh kerjasama dari seluruh pihak.
                                         </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div>
-                                        <!-- <label for="customRange2" class="form-label"> -->
-                                            <table style="width:123%">
-                                                <tr >
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
-                                                    <th>4</th>
-                                                    <th>5</th>
-                                                </tr>
-                                            </table>
-                                        <!-- </label> -->
-                                        <input type="range" class="form-range" min="1" max="5" step="1" id="customRange2">
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Pelaku LGBT harus dibunuh tanpa terkecuali, karena itu ajaran agama.
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">

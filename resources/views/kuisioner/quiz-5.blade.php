@@ -24,30 +24,23 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            Sebelum lulus (yudisium/wisuda)
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            Sesudah lulus (yudisium/wisuda)
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Tidak relevan
+                                            Saya tidak mencari kerja
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
@@ -65,32 +58,8 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check mt-2">
-                                        <label class="form-check-label" for="option-">
-                                            Sangat relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <label class="form-check-label" for="option-">
-                                            Relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <label class="form-check-label" for="option-">
-                                            Kurang relevan
-                                        </label>
-                                        <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check mt-2">
-                                        <label class="form-check-label" for="option-">
-                                            Other : <input type="text" name="other_reason" />
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
@@ -106,8 +75,109 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" style="height: 100px"></textarea>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Melalui iklan di koran/majalah, brosur
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Melamar ke perusahaan tanpa mengetahui lowongan yang ada
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Pergi ke bursa/pameran kerja
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Mencari lewat internet/iklan online/milis
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Dihubungi oleh perusahaan
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Menghubungi Kemenakertrans
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Menghubungi agen tenaga kerja komersial/swasta
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Memeroleh informasi dari pusat/kantor pengembangan karir fakultas/universitas
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Menghubungi kantor kemahasiswaan/hubungan alumni
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Membangun jejaring (network) sejak masih kuliah
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Melalui relasi (misalnya dosen, orang tua, saudara, teman, dll.)
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Membangun bisnis sendiri
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Melalui penempatan kerja atau magang
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Bekerja di tempat yang sama dengan tempat kerja semasa kuliah
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Lainnya: <input type="text" class="form-control">
+                                        </label>
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
@@ -138,18 +208,55 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
-                                            Example checkbox
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            1 Perusahaan
                                         </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                        <label class="form-check-label" for="gridCheck2">
-                                            Example checkbox 2
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            2 Perusahaan
                                         </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            3 Perusahaan
+                                        </label>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            4 Perusahaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            5 Perusahaan
+                                        </label>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            6 Perusahaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Lebih dari 6 Perusahaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
@@ -163,30 +270,53 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            1 Perusahaan
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            2 Perusahaan
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                            3 Perusahaan
+                                        </label>
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Tidak relevan
+                                            4 Perusahaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            5 Perusahaan
+                                        </label>
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            6 Perusahaan
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Lebih dari 6 Perusahaan
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
@@ -203,32 +333,95 @@
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya sekarang sudah sesuai dengan pendidikan saya.
                                         </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Relevan
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Saya belum mendapatkan pekerjaan yang lebih sesuai.
                                         </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Di pekerjaan ini saya memeroleh prospek karir yang baik.
                                         </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Tidak relevan
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya.
                                         </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Saya dipromosikan ke posisi yang kurang berhubungan dengan pendidikan saya dibanding posisi sebelumnya.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Saya dapat memeroleh pendapatan yang lebih tinggi di pekerjaan ini.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya saat ini lebih aman/terjamin/secure
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya saat ini lebih menarik
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya saat ini lebih memungkinkan saya mengambil pekerjaan tambahan/jadwal yang fleksibel, dll.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya saat ini lokasinya lebih dekat dari rumah saya.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pekerjaan saya saat ini dapat lebih menjamin kebutuhan keluarga saya.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Pada awal meniti karir ini, saya harus menerima pekerjaan yang tidak berhubungan dengan pendidikan saya.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                                        <label class="form-check-label" for="gridCheck2">
+                                            Lainnya: <input type="text" class="form-control" name="lainnya" id="lainnya" placeholder="Lainnya">
+                                        </label>
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
