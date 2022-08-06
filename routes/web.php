@@ -89,7 +89,7 @@ Route::get('/quiz-7', function () {
     ]);
 });
 
-Route::get('/quiz-', function () {
+Route::get('/quiz-8', function () {
     return view('kuisioner.quiz-8', [
         'title' => 'Kuisioner 8',
     ]);

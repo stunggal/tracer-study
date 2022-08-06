@@ -20,34 +20,27 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Bagaimanakah menurut anda kecukupan dan ketersediaan sarana dan prasarana yang ada di UNIDA Gontor?</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            Sangat cukup
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            Cukup
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
-                                    <div class="form-check">
+                                    <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
-                                        </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
-                                    </div>
-
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="option-">
-                                            Tidak relevan
+                                            Kurang Cukup
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
@@ -61,122 +54,86 @@
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Bagaimanakah kelayakan sarana dan prasarana yang tersedia di UNIDA Gontor?</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Sangat relevan
+                                            Sangat Layak
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Relevan
+                                            Layak
                                         </label>
                                         <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Kurang relevan
+                                            Kurang Layak
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
+                                        <strong></strong>
+                                    </span>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card mb-3">
+                                <div class="card-header">Bagaimanakah kemudahan mengakses sarana dan prasarana di UNIDA Gontor?</div>
+                                <div class="card-body mt-3">
+                                    <input type="hidden" name="questions" value="">
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Sangat mudah
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Mudah
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                    </div>
+
+                                    <div class="form-check mt-2">
+                                        <label class="form-check-label" for="option-">
+                                            Sulit
                                         </label>
                                         <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <div class="form-check mt-2">
                                         <label class="form-check-label" for="option-">
-                                            Other : <input type="text" name="other_reason" />
+                                            Sangat sulit
                                         </label>
-                                        <input class="form-check-input" type="radio" name="questions" id="option-1" value="">
+                                        <input class="form-check-input " type="radio" name="questions" id="option-1" value="">
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
                                         <strong></strong>
                                     </span>
-
                                 </div>
                             </div>
 
 
                             <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
+                                <div class="card-header">Saran untuk Pengembangan infrastuktur (Labolatorium, Ruang kuliah, Perpustakaan).</div>
                                 <div class="card-body mt-3">
                                     <input type="hidden" name="questions" value="">
 
                                     <div class="col-sm-10">
                                         <textarea class="form-control" style="height: 100px"></textarea>
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
-                                            Example checkbox
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                                        <label class="form-check-label" for="gridCheck2">
-                                            Example checkbox 2
-                                        </label>
-                                    </div>
-
-                                    <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
-                                        <strong></strong>
-                                    </span>
-                                </div>
-                            </div>
-
-
-                            <div class="card mb-3">
-                                <div class="card-header">Seberapa relevan pelajaran yang anda dapat dengan pekerjaan yang sekarang anda jalani</div>
-                                <div class="card-body mt-3">
-                                    <input type="hidden" name="questions" value="">
-
-                                    <div>
-                                        <!-- <label for="customRange2" class="form-label"> -->
-                                            <table style="width:123%">
-                                                <tr >
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
-                                                    <th>4</th>
-                                                    <th>5</th>
-                                                </tr>
-                                            </table>
-                                        <!-- </label> -->
-                                        <input type="range" class="form-range" min="1" max="5" step="1" id="customRange2">
                                     </div>
 
                                     <span style="margin-top: .25rem; font-size: 80%; color: #e3342f;" role="alert">
