@@ -10,7 +10,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-journal-text"></i><span>Ayo Masukkan datamu</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -21,7 +21,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <li class="nav-item">
             <a class="nav-link {{ ($title === 'Kuisioner') ? '' : 'collapsed' }}" href="/kuisioner">
