@@ -14,7 +14,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Kuisioner Penilaian Dosen</h5>
+                        <h5 class="card-title">Kuisioner: Profesi</h5>
 
                         <form method="POST" action="">
 
