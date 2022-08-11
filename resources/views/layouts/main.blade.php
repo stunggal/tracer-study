@@ -11,11 +11,14 @@
 
     <!-- Favicons -->
     <link href="http://baak.unida.gontor.ac.id/wp-content/uploads/2020/08/cropped-LOGO-UNIDA-FINAL.png" rel="icon">
-    <link href="http://baak.unida.gontor.ac.id/wp-content/uploads/2020/08/cropped-LOGO-UNIDA-FINAL.png" rel="apple-touch-icon">
+    <link href="http://baak.unida.gontor.ac.id/wp-content/uploads/2020/08/cropped-LOGO-UNIDA-FINAL.png"
+        rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +47,8 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <img src="http://baak.unida.gontor.ac.id/wp-content/uploads/2020/08/cropped-LOGO-UNIDA-FINAL.png" alt="">
+                <img src="http://baak.unida.gontor.ac.id/wp-content/uploads/2020/08/cropped-LOGO-UNIDA-FINAL.png"
+                    alt="">
                 <span class="d-none d-lg-block">Tracer Study</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -136,7 +140,8 @@
 
                 <li class="nav-item dropdown pe-3">
 
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                        data-bs-toggle="dropdown">
                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                     </a><!-- End Profile Iamge Icon -->
@@ -192,11 +197,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>{{$title}}</h1>
+            <h1>{{ $title }}</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Tracer Study</a></li>
-                    <li class="breadcrumb-item active">{{$title}}</li>
+                    <li class="breadcrumb-item active">{{ $title }}</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -219,7 +224,8 @@
         </div>
     </footer><!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -233,6 +239,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/wordcloud2.js"></script>
 
 </body>
 
