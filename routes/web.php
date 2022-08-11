@@ -95,3 +95,9 @@ Route::get('/quiz-8', function () {
     ]);
 });
 
+// make 404 route
+Route::get('/{any}', function () {
+    return view('error.index', [
+        'title' => 'Error',
+    ]);
+})->where('any', '.*');
