@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\error;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +19,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard.index', [
-        'title' => 'Dashboard',
-    ]);
-});
+// dashboard resource routes
+Route::get('/', [DashboardController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// login resource routes
+Route::get('/login', [LoginController::class, 'index']);
+
+// logout resource routes
+Route::get('/logout', [LogoutController::class, 'index']);
+
+// profile resource routes
+Route::get('/profile', [ProfileController::class, 'index']);
+
+// show profile resource routes
+Route::get('/profile/show', [ProfileController::class, 'show']);
 
 Route::get('/kuisioner', function () {
     return view('kuisioner.index', [
@@ -95,9 +106,5 @@ Route::get('/quiz-8', function () {
     ]);
 });
 
-// make 404 route
-Route::get('/{any}', function () {
-    return view('error.index', [
-        'title' => 'Error',
-    ]);
-})->where('any', '.*');
+// error resource routes
+Route::get('/{any}', [error::class, 'index']);
