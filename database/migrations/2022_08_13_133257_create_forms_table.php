@@ -19,7 +19,9 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             // user number
             $table->string('user');
+
             // have filled the form
+            $table->boolean('filled')->default(false);
             $table->timestamps();
         });
     }
