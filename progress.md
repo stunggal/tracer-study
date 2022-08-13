@@ -82,3 +82,9 @@ email
 - Pada SAAT LULUS, pada tingkat mana kompetensi di bawah ini yang di kuasai
 - Pada SAAT INI, pada tingkat mana kompetensi di bawah ini diperlukan dalam pekerjaan
 - pendapat tentang penekanan pada metode pembelajaran di bawah ini dilaksanakan di program studi 
+
+
+
+
+graduation = api
+registered user = db
