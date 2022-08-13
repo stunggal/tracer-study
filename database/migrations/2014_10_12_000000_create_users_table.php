@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('full_name');
             $table->string('student_email')->unique();
             $table->string('nim')->unique();
-            $table->string('username')->default('');
+            $table->string('username');
             $table->string('password');
             $table->string('tahun_lulus');
             $table->string('program_studi');
