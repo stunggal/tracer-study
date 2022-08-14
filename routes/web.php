@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AjaxFORMCRUDController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,11 +41,6 @@ Route::get('/kuisioner', function () {
     ]);
 });
 
-Route::get('/master-kuisioner', function () {
-    return view('kuisioner.master', [
-        'title' => 'Master Kuisioner',
-    ]);
-});
 
 // Route::get('/test', function () {
 //     return redirect()->route('client.test', [
@@ -106,5 +102,17 @@ Route::get('/quiz-8', function () {
     ]);
 });
 
+// Route::get('/master-kuisioner', function () {
+//     return view('kuisioner.master', [
+//         'title' => 'Master Kuisioner',
+//     ]);
+// });
+
+Route::get('master-kuisioner', [AjaxFORMCRUDController::class, 'index']);
+Route::get('test-kuisioner', [AjaxFORMCRUDController::class, 'index1']);
+Route::post('add-update-book', [AjaxFORMCRUDController::class, 'store']);
+Route::post('edit-book', [AjaxFORMCRUDController::class, 'edit']);
+Route::post('delete-book', [AjaxFORMCRUDController::class, 'destroy']);
 // error resource routes
 Route::get('/{any}', [error::class, 'index']);
+
