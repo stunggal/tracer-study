@@ -1,8 +1,12 @@
 @extends('layouts.main')
 
+@section('header')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+@endsection
+
 @section('sidebar')
     @include('layouts.sidebar')
-
 @endsection
 
 @section('content')
@@ -13,70 +17,8 @@
         <div class="col-lg-8">
             <div class="row">
 
-                <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
-                    <div class="card info-card sales-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>| Jumlah total</span></h5>
 
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-check2-all"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6 class="text-primary">15</h6>
-                                    <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Quis</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Sales Card -->
-
-                <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
-                    <div class="card info-card sales-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>| Jumlah Aktif</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-check2"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6 class="text-success">10</h6>
-                                    <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Quis</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Sales Card -->
-
-                <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
-                    <div class="card info-card sales-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>| Jumlah Draft/Non Aktif</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-exclamation"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6 class="text-danger">5</h6>
-                                    <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Quis</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Sales Card -->
-
-
+            @include('layouts.modal-pertanyaan-input')
 
                 <!-- Reports -->
                 <div class="col-12">
@@ -95,27 +37,39 @@
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-title">Kuisioner <span>/ Mari kita isi kuisioner tracer studi untuk menuju unida unggul 2025</span></h5>
+
+                            <h5 class="card-title">Kuisioner <span>/ Mari buat kuisioner yang berkualitas untuk menuju unida unggul 2025</span></h5>
 
                             <div class="container">
 
-                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1 mb-3 ">Buat Kuisioner</a>
+                                <button type="button" class="btn btn-primary rounded bg-success p-1 ms-1 mb-3" data-bs-toggle="modal" data-bs-target="#addNewBook">
+                                    Buat Pertanyaan
+                                </button>
 
-                                <div class="row">
-                                    
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner Penilaian Dosen</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1">View</a>
-                                                <a href="#" class="btn btn-primary rounded bg-primary p-1 ms-1">Edit</a>
-                                            </div>
-                                        </div>
+
+
+                                <?php $i = 1 ?>
+                                @foreach ($books as $book)
+                                <div class="card">
+                                    <h5 class="card-header">Pertanyaan {{ $book->pertanyaan_ke }} | Paragraf
+                                        <a href="javascript:void(0)" class="btn btn-primary delete" data-bs-target="{{ $book->id }}">Jenis</a>
+                                    </h5>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $book->pertanyaan }}</h5>
+                                        <p class="card-text">Jenis jawaban: {{ $book->jenis_jawaban }}</p>
+
+                                        <a href="javascript:void(0)" class="btn float-right mr-2 btn-danger delete" data-id="{{ $book->id }}">Delete Jawaban</a>
+                                        <a href="javascript:void(0)" class="btn float-right btn-danger delete" data-id="{{ $book->id }}">Delete Pertanyaan</a>
                                     </div>
-
+                                </div><br>
+                                <?php $i++ ?>
+                                @endforeach
+                                <div class="col-md-12 mt-1 mb-2 text-center rounded">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addNewBook">
+                                        <i class="ri-add-circle-line"></i></button>
+                                    </button>
                                 </div>
+
                             </div>
 
                         </div>
@@ -123,11 +77,13 @@
                     </div>
                 </div><!-- End Reports -->
 
-                
+
 
 
             </div>
         </div><!-- End Left side columns -->
+
+
 
         <!-- Right side columns -->
         <div class="col-lg-4">
@@ -177,4 +133,103 @@
 
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $('#addNewBook').click(function() {
+            // $('#pertanyaan_ke').trigger("reset");
+            // $('#pertanyaan').trigger("reset");
+            $('#ajaxBookModel').html("Add Book");
+            $('#ajax-book-model').modal('show');
+        });
+
+        $('body').on('click', '.edit', function() {
+
+            var id = $(this).data('id');
+
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: "{{ url('edit-book') }}",
+                data: {
+                    id: id
+                },
+                dataType: 'json',
+                success: function(res) {
+                    $('#ajaxBookModel').html("Edit Book");
+                    $('#ajax-book-model').modal('show');
+                    $('#id').val(res.id);
+                    $('#pertanyaan_ke').val(res.pertanyaan_ke);
+                    $('#pertanyaan').val(res.pertanyaan);
+                    $('#jenis_jawaban').val(res.jenis_jawaban);
+                    $('#nim_mhs').val(res.nim_mhs);
+                }
+            });
+
+        });
+
+        $('body').on('click', '.delete', function() {
+
+            if (confirm("Delete Record?") == true) {
+                var id = $(this).data('id');
+
+                // ajax
+                $.ajax({
+                    type: "POST",
+                    url: "{{ url('delete-book') }}",
+                    data: {
+                        id: id
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
+        $('body').on('click', '#btn-save', function(event) {
+
+            var id = $("#id").val();
+            var pertanyaan_ke = $("#pertanyaan_ke").val();
+            var pertanyaan = $("#pertanyaan").val();
+            var jenis_jawaban = $("#jenis_jawaban").val();
+            var nim_mhs = $("#nim_mhs").val();
+
+            $("#btn-save").html('Please Wait...');
+            $("#btn-save").attr("disabled", true);
+
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: "{{ url('add-update-book') }}",
+                data: {
+                    id: id,
+                    pertanyaan_ke: pertanyaan_ke,
+                    pertanyaan: pertanyaan,
+                    jenis_jawaban: jenis_jawaban,
+                    nim_mhs: nim_mhs,
+                    // author: author,
+                },
+                dataType: 'json',
+                success: function(res) {
+                    window.location.reload();
+                    $("#btn-save").html('Submit');
+                    $("#btn-save").attr("disabled", false);
+                }
+            });
+
+        });
+
+    });
+</script>
 @endsection

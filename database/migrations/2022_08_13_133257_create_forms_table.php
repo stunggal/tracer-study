@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
-            // user_id
-            $table->foreign('user_id')->references('id')->on('users');
-            // user number
-            $table->string('user');
-            // have filled the form
+            $table->string('pertanyaan_ke');
+            $table->string('pertanyaan');
+            $table->string('jenis_jawaban');
+            $table->string('nim_mhs');
             $table->timestamps();
         });
     }
