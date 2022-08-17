@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('header')
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 @endsection
 
 @section('sidebar')
-    @include('layouts.sidebar')
+@include('layouts.sidebar')
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
             <div class="row">
 
 
-            @include('layouts.modal-pertanyaan-input')
+                @include('layouts.modal-pertanyaan-input')
 
                 <!-- Reports -->
                 <div class="col-12">
@@ -46,18 +46,25 @@
                                     Buat Pertanyaan
                                 </button>
 
-
-
-                                <?php $i = 1 ?>
+                                <?php
+                                $i = 1;
+                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box');
+                                ?>
                                 @foreach ($books as $book)
+                                @include('layouts.modal-pilihan-input')
                                 <div class="card">
-                                    <h5 class="card-header">Pertanyaan {{ $book->pertanyaan_ke }} | Paragraf
+                                    <h5 class="card-header">Pertanyaan {{ $book->pertanyaan_ke }} | <?= $jenis[$book->jenis_jawaban] ?>
                                         <a href="javascript:void(0)" class="btn btn-primary delete" data-bs-target="{{ $book->id }}">Jenis</a>
                                     </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
                                         <p class="card-text">Jenis jawaban: {{ $book->jenis_jawaban }}</p>
+                                        <p class="card-text">Jenis jawaban: {{ $book->jenis_jawaban }}</p>
+                                        <?php if ($book->jenis_jawaban != 1) : ?>
+                                        
+                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> Buat Pilihan </button>
 
+                                        <?php endif; ?>
                                         <a href="javascript:void(0)" class="btn float-right mr-2 btn-danger delete" data-id="{{ $book->id }}">Delete Jawaban</a>
                                         <a href="javascript:void(0)" class="btn float-right btn-danger delete" data-id="{{ $book->id }}">Delete Pertanyaan</a>
                                     </div>
@@ -75,10 +82,8 @@
                         </div>
 
                     </div>
+
                 </div><!-- End Reports -->
-
-
-
 
             </div>
         </div><!-- End Left side columns -->
@@ -134,7 +139,7 @@
     </div>
 </section>
 
-<script type="text/javascript">
+<script>
     $(document).ready(function($) {
 
         $.ajaxSetup({
@@ -225,6 +230,51 @@
                     window.location.reload();
                     $("#btn-save").html('Submit');
                     $("#btn-save").attr("disabled", false);
+                }
+            });
+
+        });
+
+
+
+
+        $('#addNewPilihan').click(function() {
+            // $('#pertanyaan_ke').trigger("reset");
+            // $('#pertanyaan').trigger("reset");
+            $('#ajaxNewPilihan').html("Add Pilihan");
+            $('#ajax-new-pilihan').modal('show');
+        });
+
+        $(document).on("click", "#addNewPilihan", function(){
+            var id_pertanyaan = $(this).data('id_pertanyaan');
+            $('.modal-body #id_pertanyaan').val(id_pertanyaan);
+        })
+
+        $('body').on('click', '#btn-save-pilihan', function(event) {
+
+            var id = $("#id").val();
+            var id_pertanyaan = $("#id_pertanyaan").val();
+            var pilihan_jawaban = $("#pilihan_jawaban").val();
+            console.log(id_pertanyaan);
+
+            $("#btn-save-pilihan").html('Please Wait...');
+            $("#btn-save-pilihan").attr("disabled", true);
+
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: "{{ url('add-pilihan-jawaban') }}",
+                data: {
+                    id: id,
+                    id_pertanyaan: id_pertanyaan,
+                    pilihan_jawaban: pilihan_jawaban,
+                    // author: author,
+                },
+                dataType: 'json',
+                success: function(res) {
+                    window.location.reload();
+                    $("#btn-save-pilihan").html('Submit');
+                    $("#btn-save-pilihan").attr("disabled", false);
                 }
             });
 

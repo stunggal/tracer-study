@@ -113,6 +113,8 @@ Route::get('test-kuisioner', [AjaxFORMCRUDController::class, 'index1']);
 Route::post('add-update-book', [AjaxFORMCRUDController::class, 'store']);
 Route::post('edit-book', [AjaxFORMCRUDController::class, 'edit']);
 Route::post('delete-book', [AjaxFORMCRUDController::class, 'destroy']);
+
+Route::post('add-pilihan-jawaban', [AjaxFORMCRUDController::class, 'pilihanJawaban']);
 // error resource routes
 Route::get('/{any}', [error::class, 'index']);
 

@@ -10,14 +10,14 @@
                     <div class="form-group">
                         <label class="col-sm-4 control-label">Pertanyaan ke</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="pertanyaan_ke" name="pertanyaan_ke" placeholder="Ex : 1" value="" required="">
+                            <input type="text" class="form-control" id="pertanyaan_ke" name="pertanyaan_ke" placeholder="Example : 1" value="" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name" class="col-sm-4 control-label">Pertanyaan</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" id="pertanyaan" name="pertanyaan" placeholder="Ex : Tahun berapa anda lulus" value="" maxlength="50" required="">
+                            <input type="text" class="form-control" id="pertanyaan" name="pertanyaan" placeholder="Example : Tahun berapa anda lulus" value="" maxlength="50" required>
                         </div>
                     </div>
 

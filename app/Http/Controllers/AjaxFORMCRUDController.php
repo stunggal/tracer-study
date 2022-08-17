@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\form;
+use App\Models\sub_jawaban;
 
 class AjaxFORMCRUDController extends Controller
 {
@@ -14,7 +15,8 @@ class AjaxFORMCRUDController extends Controller
      */
     public function index()
     {
-        $data['books'] = form::orderBy('id', 'desc')->paginate(5);
+        $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(15);
+        $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(10);
 
         // return view('ajax-book-crud',$data);
         return view('kuisioner.master', $data, [
@@ -50,6 +52,21 @@ class AjaxFORMCRUDController extends Controller
                 'pertanyaan' => $request->pertanyaan,
                 'jenis_jawaban' => $request->jenis_jawaban,
                 'nim_mhs' => $request->nim_mhs
+            ]
+        );
+
+        return response()->json(['success' => true]);
+    }
+
+    public function pilihanJawaban(Request $request)
+    {
+        $pilihan   =   sub_jawaban::updateOrCreate(
+            [
+                'id' => $request->id
+            ],
+            [
+                'id_pertanyaan' => $request->id_pertanyaan,
+                'pilihan_jawaban' => $request->pilihan_jawaban,
             ]
         );
 
