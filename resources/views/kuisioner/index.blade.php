@@ -99,102 +99,14 @@
 
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Tracer Studi</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-1" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <div class="col-sm-4">
                                         <div class="card">
                                             <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Company Profile</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-2" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Direct supervisor contact information</h5>
-                                                <p class="card-text">Berikut merupakan kuesioner terkait dengan atasan langsung di tempat anda bekerja/berkhidmah saat ini. Jika Anda tidak memiliki atasan langsung (misal anda wirausahawan dll), maka tokoh masyarakat yang ada di wilayah Anda dapat menilai kapasitas Anda. Jika anda seorang ibu rumah tangga, maka suami anda sebagai atasan anda. Jika anda studi lanjut/beasiswa maka kaprodi/dekan anda sebagai atasan anda.</p>
-                                                
-                                                <a href="/quiz-3" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Relasi antara bidang studi dengan pekerjaan/amanat saat ini</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-4" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Profesi</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-5" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Pengaruh kurikulum terhadap profesi</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-6" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: Sarana prasarana</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-7" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Kuisioner: KeIslamisasian</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/quiz-8" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="card">
-                                            <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Contoh</h5>
-                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                <a href="/test" class="btn btn-primary rounded bg-primary p-1 ms-1">Isi Kuisioner</a>
+                                                <h5 class="card-title">Main Kuisioner</h5>
+                                                <p class="card-text">Mari kita isi kuisioner tracer studi untuk menuju unida unggul 2025</p>
+                                                <a href="/quiz-main" class="btn btn-primary rounded bg-primary p-1 ms-1">Mulai</a>
                                             </div>
                                         </div>
                                     </div>
