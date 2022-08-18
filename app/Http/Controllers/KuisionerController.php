@@ -15,11 +15,17 @@ class KuisionerController extends Controller
      */
     public function mainQuis()
     {
-        $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(15);
-        $data['pilihan'] = sub_jawaban::orderBy('id', 'asc')->paginate(10);
+        $books = form::orderBy('pertanyaan_ke', 'asc')->paginate(15);
+        $pilihan = sub_jawaban::orderBy('id', 'asc')->paginate(10);
+        
+        $sub_jawaban = sub_jawaban::all();
 
         // return view('ajax-book-crud',$data);
-        return view('kuisioner.quis-main', $data, [
+        return view('kuisioner.quis-main', [
+            'books' => $books,
+            'pilihan' => $pilihan,
+            // 'sub_jawaban' => $sub_jawaban,
+        ], [
             'title' => 'Master Kuisioner',
         ]);
     }

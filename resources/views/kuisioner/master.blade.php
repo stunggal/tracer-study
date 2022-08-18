@@ -48,7 +48,7 @@
 
                                 <?php
                                 $i = 1;
-                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box');
+                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box', '4' => 'Text Area');
                                 ?>
                                 @foreach ($books as $book)
                                 @include('layouts.modal-pilihan-input')
@@ -58,18 +58,21 @@
                                     </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
-                                        <?php $i = 1;?>
+                                        <?php $i = 1; 
+                                        
+                                        if ($book->jenis_jawaban != 1 && $book->jenis_jawaban != 4) :
+                                        ?>
                                         @foreach ($pilihan as $pilih)
                                         @if ($pilih->id_pertanyaan == $book->id)
                                         <div class="form-check">
                                             <p><?= $i ?>. <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
-                                            
+
                                         </div>
-                                        <?php $i++?>
+                                        <?php $i++ ?>
                                         @endif
                                         @endforeach
 
-                                        <?php if ($book->jenis_jawaban != 1) : ?>
+                                        <?php  ?>
                                             <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> Buat Pilihan </button>
                                         <?php endif; ?>
 

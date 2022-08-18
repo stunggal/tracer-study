@@ -55,14 +55,15 @@ Route::get('/kuisioner', function () {
 //         'title' => 'Master Kuisioner',
 //     ]);
 // });
-
-// Route Kuisioner
-
 Route::get('/test', function () {
     return view('Client.test', [
         'title' => 'Test',
     ]);
 });
+
+
+// Route Kuisioner
+
 
 Route::get('quiz-main', [KuisionerController::class, 'mainQuis']);
 

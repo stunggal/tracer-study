@@ -24,11 +24,11 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-4 control-label">Jenis Jawaban</label>
                         <div class="col-sm-12">
-                            <select class="form-select" aria-label="Default select example"  id="jenis_jawaban" name="jenis_jawaban">
-                                <option selected>Pilih jenis soal</option>
-                                <option value="1">Paragraf</option>
+                            <select class="form-select" aria-label="Default select example" id="jenis_jawaban" name="jenis_jawaban">
+                                <option value="1" selected>Paragraf</option>
                                 <option value="2">Radio Button</option>
                                 <option value="3">Combo Box</option>
+                                <option value="4">Text Area</option>
                             </select>
                         </div>
                     </div>

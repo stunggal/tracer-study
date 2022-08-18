@@ -55,6 +55,23 @@ class AjaxFORMCRUDController extends Controller
             ]
         );
 
+        $form_id = form::latest()->value('id');
+
+
+        if ($request->jenis_jawaban == '1' || $request->jenis_jawaban == '4') {
+            # code...
+            $pilihan   =   sub_jawaban::updateOrCreate(
+                [
+                    'id' => ''
+                ],
+                [
+                    'id_pertanyaan' => $form_id,
+                    'pilihan_jawaban' => '',
+                ]
+            );
+        }
+
+
         return response()->json(['success' => true]);
     }
 
@@ -98,6 +115,7 @@ class AjaxFORMCRUDController extends Controller
     public function destroy(Request $request)
     {
         $book = form::where('id', $request->id)->delete();
+        $sub_jawaban = sub_jawaban::where('id_pertanyaan', $request->id)->delete();
 
         return response()->json(['success' => true]);
     }
