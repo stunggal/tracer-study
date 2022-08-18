@@ -58,12 +58,14 @@
                                     </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
+                                        <?php $i = 1;?>
                                         @foreach ($pilihan as $pilih)
                                         @if ($pilih->id_pertanyaan == $book->id)
                                         <div class="form-check">
-                                            <p><a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
-
+                                            <p><?= $i ?>. <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
+                                            
                                         </div>
+                                        <?php $i++?>
                                         @endif
                                         @endforeach
 
