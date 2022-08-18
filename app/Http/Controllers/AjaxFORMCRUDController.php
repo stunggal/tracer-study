@@ -16,7 +16,7 @@ class AjaxFORMCRUDController extends Controller
     public function index()
     {
         $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(15);
-        $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(10);
+        $data['pilihan'] = sub_jawaban::orderBy('id', 'asc')->paginate(10);
 
         // return view('ajax-book-crud',$data);
         return view('kuisioner.master', $data, [
@@ -98,6 +98,13 @@ class AjaxFORMCRUDController extends Controller
     public function destroy(Request $request)
     {
         $book = form::where('id', $request->id)->delete();
+
+        return response()->json(['success' => true]);
+    }
+
+    public function destroyPilihan(Request $request)
+    {
+        $book = sub_jawaban::where('id', $request->id)->delete();
 
         return response()->json(['success' => true]);
     }

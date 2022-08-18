@@ -58,13 +58,20 @@
                                     </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
-                                        <p class="card-text">Jenis jawaban: {{ $book->jenis_jawaban }}</p>
-                                        <p class="card-text">Jenis jawaban: {{ $book->jenis_jawaban }}</p>
-                                        <?php if ($book->jenis_jawaban != 1) : ?>
-                                        
-                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> Buat Pilihan </button>
+                                        @foreach ($pilihan as $pilih)
+                                        @if ($pilih->id_pertanyaan == $book->id)
+                                        <div class="form-check">
+                                            <p><a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
 
+                                        </div>
+                                        @endif
+                                        @endforeach
+
+                                        <?php if ($book->jenis_jawaban != 1) : ?>
+                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> Buat Pilihan </button>
                                         <?php endif; ?>
+
+                                        <p class="card-text">Jenis jawaban: <?= $jenis[$book->jenis_jawaban] ?></p>
                                         <a href="javascript:void(0)" class="btn float-right mr-2 btn-danger delete" data-id="{{ $book->id }}">Delete Jawaban</a>
                                         <a href="javascript:void(0)" class="btn float-right btn-danger delete" data-id="{{ $book->id }}">Delete Pertanyaan</a>
                                     </div>
@@ -238,16 +245,43 @@
 
 
 
+
+        $('body').on('click', '.delete-pilihan', function() {
+
+            if (confirm("Delete Record?") == true) {
+                var id = $(this).data('id');
+
+                // ajax
+                $.ajax({
+                    type: "POST",
+                    url: "{{ url('delete-pilihan') }}",
+                    data: {
+                        id: id
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+
+                        window.location.reload();
+                    }
+                });
+            }
+
+        });
+
         $('#addNewPilihan').click(function() {
             // $('#pertanyaan_ke').trigger("reset");
             // $('#pertanyaan').trigger("reset");
-            $('#ajaxNewPilihan').html("Add Pilihan");
+            // $('#ajaxNewPilihan').html("Add Pilihan");
             $('#ajax-new-pilihan').modal('show');
+            // $('#pilihan_jawaban').trigger("pilihan_jawaban");
         });
 
-        $(document).on("click", "#addNewPilihan", function(){
+        // $('#addNewBook').click(function() {
+        $(document).on('click', "#addNewPilihan", function() {
+
             var id_pertanyaan = $(this).data('id_pertanyaan');
-            $('.modal-body #id_pertanyaan').val(id_pertanyaan);
+
+            $('#id_pertanyaan').val(id_pertanyaan);
         })
 
         $('body').on('click', '#btn-save-pilihan', function(event) {
@@ -255,7 +289,6 @@
             var id = $("#id").val();
             var id_pertanyaan = $("#id_pertanyaan").val();
             var pilihan_jawaban = $("#pilihan_jawaban").val();
-            console.log(id_pertanyaan);
 
             $("#btn-save-pilihan").html('Please Wait...');
             $("#btn-save-pilihan").attr("disabled", true);
