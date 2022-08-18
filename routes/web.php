@@ -115,6 +115,7 @@ Route::post('edit-book', [AjaxFORMCRUDController::class, 'edit']);
 Route::post('delete-book', [AjaxFORMCRUDController::class, 'destroy']);
 
 Route::post('add-pilihan-jawaban', [AjaxFORMCRUDController::class, 'pilihanJawaban']);
+Route::post('delete-pilihan', [AjaxFORMCRUDController::class, 'destroyPilihan']);
 // error resource routes
 Route::get('/{any}', [error::class, 'index']);
 
