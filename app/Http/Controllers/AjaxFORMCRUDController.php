@@ -27,16 +27,6 @@ class AjaxFORMCRUDController extends Controller
         ]);
     }
 
-    public function index1()
-    {
-        $data['books'] = form::orderBy('id', 'desc')->paginate(150);
-
-        // return view('ajax-book-crud',$data);
-        return view('ajax-book-crud', $data, [
-            'title' => 'Master Kuisioner',
-        ]);
-    }
-
 
     /**
      * Store a newly created resource in storage.
