@@ -15,18 +15,21 @@ class AjaxFORMCRUDController extends Controller
      */
     public function index()
     {
-        $data['books'] = form::orderBy('pertanyaan_ke', 'asc')->paginate(15);
-        $data['pilihan'] = sub_jawaban::orderBy('id', 'asc')->paginate(10);
+        $books = form::orderBy('pertanyaan_ke', 'asc')->paginate(150);
+        $pilihan = sub_jawaban::orderBy('id', 'asc')->paginate(1000);
 
         // return view('ajax-book-crud',$data);
-        return view('kuisioner.master', $data, [
+        return view('kuisioner.master', [
+            'books' => $books,
+            'pilihan' => $pilihan,
+        ], [
             'title' => 'Master Kuisioner',
         ]);
     }
 
     public function index1()
     {
-        $data['books'] = form::orderBy('id', 'desc')->paginate(5);
+        $data['books'] = form::orderBy('id', 'desc')->paginate(150);
 
         // return view('ajax-book-crud',$data);
         return view('ajax-book-crud', $data, [
@@ -51,7 +54,6 @@ class AjaxFORMCRUDController extends Controller
                 'pertanyaan_ke' => $request->pertanyaan_ke,
                 'pertanyaan' => $request->pertanyaan,
                 'jenis_jawaban' => $request->jenis_jawaban,
-                'nim_mhs' => $request->nim_mhs
             ]
         );
 

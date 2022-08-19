@@ -29,6 +29,7 @@
                                 <option value="2">Radio Button</option>
                                 <option value="3">Combo Box</option>
                                 <option value="4">Text Area</option>
+                                <option value="5">Range 1-5</option>
                             </select>
                         </div>
                     </div>

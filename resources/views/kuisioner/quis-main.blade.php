@@ -43,7 +43,6 @@ use App\Models\form;
 
                                 <?php
                                 $i = 1;
-                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box');
 
                                 ?>
                                 @foreach ($books as $book)
@@ -88,6 +87,25 @@ use App\Models\form;
                                         } elseif ($pilih->id_pertanyaan == $book->id && $book->jenis_jawaban == '4') {
                                         ?>
                                             <textarea class="form-control" style="height: 100px"></textarea>
+
+                                        <?php
+                                        } elseif ($pilih->id_pertanyaan == $book->id && $book->jenis_jawaban == '5') {
+                                        ?>
+                                            <label class="form-check-label mt-2" for="option-">
+                                                <strong>
+                                                    {{ $pilih->pilihan_jawaban }}
+                                                </strong>
+                                            </label>
+                                            <table style="width:123%">
+                                                <tr>
+                                                    <th>1</th>
+                                                    <th>2</th>
+                                                    <th>3</th>
+                                                    <th>4</th>
+                                                    <th>5</th>
+                                                </tr>
+                                            </table>
+                                            <input type="range" class="form-range" min="1" max="5" step="1" id="{{ $pilih->pilihan_jawaban }}">
 
                                         <?php
                                         }

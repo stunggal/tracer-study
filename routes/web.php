@@ -36,11 +36,6 @@ Route::get('/profile', [ProfileController::class, 'index']);
 // show profile resource routes
 Route::get('/profile/show', [ProfileController::class, 'show']);
 
-Route::get('/kuisioner', function () {
-    return view('kuisioner.index', [
-        'title' => 'Kuisioner',
-    ]);
-});
 
 
 // Route::get('/test', function () {
@@ -66,6 +61,7 @@ Route::get('/test', function () {
 
 
 Route::get('quiz-main', [KuisionerController::class, 'mainQuis']);
+Route::get('kuisioner', [KuisionerController::class, 'index']);
 
 Route::get('master-kuisioner', [AjaxFORMCRUDController::class, 'index']);
 Route::get('test-kuisioner', [AjaxFORMCRUDController::class, 'index1']);
