@@ -9,9 +9,45 @@
 @include('layouts.sidebar')
 @endsection
 
+<?php
+
+
+
+?>
+
 @section('content')
 <section class="section dashboard">
     <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+            <div class="row">
+
+                <!-- Sales Card -->
+                <div class="col-xxl-4 col-md-6">
+                    <div class="card info-card sales-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kuisioner <span>| Jumlah quiz</span></h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-check2-all"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6 class="text-primary"><?= $books->count() ?></h6>
+                                    <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Quis</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- End Sales Card -->
+
+
+
+
+            </div>
+        </div><!-- End Left side columns -->
 
         <!-- Left side columns -->
         <div class="col-lg-8">
@@ -48,7 +84,7 @@
 
                                 <?php
                                 $i = 1;
-                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box', '4' => 'Text Area');
+                                $jenis = array('1' => 'Paragraf', '2' => 'Radio Button', '3' => 'Combo Box', '4' => 'Text Area', '5' => 'Ranges');
                                 ?>
                                 @foreach ($books as $book)
                                 @include('layouts.modal-pilihan-input')
@@ -58,23 +94,38 @@
                                     </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
-                                        <?php $i = 1; 
-                                        
+                                        <?php $i = 1;
+
                                         if ($book->jenis_jawaban != 1 && $book->jenis_jawaban != 4) :
                                         ?>
-                                        @foreach ($pilihan as $pilih)
-                                        @if ($pilih->id_pertanyaan == $book->id)
-                                        <div class="form-check">
-                                            <p><?= $i ?>. <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
+                                            @foreach ($pilihan as $pilih)
+                                            @if ($pilih->id_pertanyaan == $book->id)
+                                            <div class="form-check">
+                                                <p><?= $i ?>. <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
 
-                                        </div>
-                                        <?php $i++ ?>
-                                        @endif
-                                        @endforeach
+                                            </div>
+                                            <?php $i++ ?>
+                                            @endif
+                                            @endforeach
 
-                                        <?php  ?>
-                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> Buat Pilihan </button>
-                                        <?php endif; ?>
+                                            <?php  ?>
+                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> <?= ($book->jenis_jawaban == 5) ? 'Buat Sub Pertanyaan' : 'Buat Pilihan'; ?> </button>
+
+                                            <?php
+                                            if ($book->jenis_jawaban != 1 || $book->jenis_jawaban != 4 || $book->jenis_jawaban != 5) {
+                                            ?>
+                                                <button type="button" class="btn btn-success btn-sm" data-id_pertanyaan="{{ $book->id }}" id="addOther" disabled> + Other </button>
+                                                <form action="javascript:void(0)" id="addOther" name="addOther" method="POST">
+                                                    <input type="hidden" name="id" id="id">
+                                                    <input type="hidden" name="id_pertanyaan_other" id="id_pertanyaan_other" value="{{ $book->id }}">
+                                                    <input type="hidden" name="pilihan_jawaban_other" id="pilihan_jawaban_other" value="other">
+
+                                                </form>
+
+                                        <?php
+                                            }
+                                        endif;
+                                        ?>
 
                                         <p class="card-text">Jenis jawaban: <?= $jenis[$book->jenis_jawaban] ?></p>
                                         <a href="javascript:void(0)" class="btn float-right mr-2 btn-danger delete" data-id="{{ $book->id }}">Delete Jawaban</a>
@@ -287,6 +338,29 @@
             var id_pertanyaan = $(this).data('id_pertanyaan');
 
             $('#id_pertanyaan').val(id_pertanyaan);
+        })
+
+        $('body').on('click', '#addOther', function(event) {
+            var id = $("#id").val();
+            var id_pertanyaan = $("#id_pertanyaan_other").val();
+            var pilihan_jawaban = $("#pilihan_jawaban_other").val();
+
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: "{{ url('add-pilihan-jawaban') }}",
+                data: {
+                    id: id,
+                    id_pertanyaan: id_pertanyaan,
+                    pilihan_jawaban: pilihan_jawaban,
+                },
+                dataType: 'json',
+                success: function(res) {
+                    window.location.reload();
+                    // $("#btn-save-pilihan").html('Submit');
+                    // $("#btn-save-pilihan").attr("disabled", false);
+                }
+            });
         })
 
         $('body').on('click', '#btn-save-pilihan', function(event) {

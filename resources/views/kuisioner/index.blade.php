@@ -24,7 +24,7 @@
                                     <i class="bi bi-check2-all"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6 class="text-primary">15</h6>
+                                    <h6 class="text-primary"><?= $books->count() ?></h6>
                                     <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Quis</span>
 
                                 </div>
