@@ -37,39 +37,32 @@ Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/profile/show', [ProfileController::class, 'show']);
 
 
+// - ROUTE KUISIONER CLIENT -
 
-// Route::get('/test', function () {
-//     return redirect()->route('client.test', [
-//         'title' => 'Test',
-//     ]);
-// });
-
-
-// Route::get('/master-kuisioner', function () {
-//     return view('kuisioner.master', [
-//         'title' => 'Master Kuisioner',
-//     ]);
-// });
-Route::get('/test', function () {
-    return view('Client.test', [
-        'title' => 'Test',
-    ]);
-});
-
-
-// Route Kuisioner
-
-
+// Route Main Kuisioner 
 Route::get('quiz-main', [KuisionerController::class, 'mainQuis']);
+
+// Route Index Kuisioner 
 Route::get('kuisioner', [KuisionerController::class, 'index']);
 
+// - ROUTE AJAX CRUD FORM -
+
+// Route Main CRUD Kuisioner 
 Route::get('master-kuisioner', [AjaxFORMCRUDController::class, 'index']);
-Route::get('test-kuisioner', [AjaxFORMCRUDController::class, 'index1']);
+
+// Route Insert Pertanyaan Kuisioner 
 Route::post('add-update-book', [AjaxFORMCRUDController::class, 'store']);
+
+// Route Edit Pertanyaan Kuisioner 
 Route::post('edit-book', [AjaxFORMCRUDController::class, 'edit']);
+
+// Route Delete Pertanyaan Kuisioner 
 Route::post('delete-book', [AjaxFORMCRUDController::class, 'destroy']);
 
+// Route Add Sub-Pertanyaan/Pilihan Kuisioner 
 Route::post('add-pilihan-jawaban', [AjaxFORMCRUDController::class, 'pilihanJawaban']);
+
+// Route Delete Sub-Pertanyaan/Pilihan Kuisioner 
 Route::post('delete-pilihan', [AjaxFORMCRUDController::class, 'destroyPilihan']);
 
 
