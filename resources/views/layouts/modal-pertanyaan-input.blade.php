@@ -5,7 +5,6 @@
             <div class="modal-body">
                 <form action="javascript:void(0)" id="addEditBookForm" name="addEditBookForm" class="form-horizontal" method="POST">
                     <input type="hidden" name="id" id="id">
-                    <input type="hidden" name="nim_mhs" id="nim_mhs" value="402019611018">
 
                     <div class="form-group">
                         <label class="col-sm-4 control-label">Pertanyaan ke</label>

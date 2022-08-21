@@ -64,11 +64,14 @@ use App\Models\form;
                                         } elseif ($pilih->id_pertanyaan == $book->id && $book->jenis_jawaban == '2') {
                                         ?>
                                             <div class="form-check">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="{{ $pilih->id_pertanyaan }}" id="{{ $pilih->pilihan_jawaban }}" value="{{ $pilih->pilihan_jawaban }}">
+                                                <div class="form-check mt-2">
                                                     <label class="form-check-label" for="gridRadios1">
                                                         {{ $pilih->pilihan_jawaban }}
+                                                        <?php if ($pilih->pilihan_jawaban == 'other') : ?>
+                                                            <input type="text" class="form-control" name="other_reason" />
+                                                        <?php endif; ?>
                                                     </label>
+                                                    <input class="form-check-input" type="radio" name="{{ $pilih->id_pertanyaan }}" id="{{ $pilih->pilihan_jawaban }}" value="{{ $pilih->pilihan_jawaban }}">
                                                 </div>
                                             </div>
                                         <?php
@@ -76,10 +79,13 @@ use App\Models\form;
                                         } elseif ($pilih->id_pertanyaan == $book->id && $book->jenis_jawaban == '3') {
                                         ?>
                                             <div class="form-check">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="{{ $pilih->pilihan_jawaban }}">
+                                                <div class="form-check mt-2">
                                                     <label class="form-check-label" for="gridCheck1">
                                                         {{ $pilih->pilihan_jawaban }}
+                                                        <input class="form-check-input" type="checkbox" id="{{ $pilih->pilihan_jawaban }}">
+                                                        <?php if ($pilih->pilihan_jawaban == 'other') : ?>
+                                                            <input type="text" class="form-control" name="other_reason" />
+                                                        <?php endif; ?>
                                                     </label>
                                                 </div>
                                             </div>
@@ -117,11 +123,6 @@ use App\Models\form;
                                 </div><br>
                                 <?php $i++ ?>
                                 @endforeach
-                                <div class="col-md-12 mt-1 mb-2 text-center rounded">
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addNewBook">
-                                        <i class="ri-add-circle-line"></i></button>
-                                    </button>
-                                </div>
 
                             </div>
 

@@ -38,7 +38,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  @yield('header')
+    @yield('header')
 </head>
 
 <body>
