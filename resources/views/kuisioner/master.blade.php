@@ -90,8 +90,8 @@
                                 @include('layouts.modal-pilihan-input')
                                 <div class="card">
                                     <h5 class="card-header">Pertanyaan {{ $book->pertanyaan_ke }} | <?= $jenis[$book->jenis_jawaban] ?>
-                                        <a href="javascript:void(0)" class="btn btn-primary delete" data-bs-target="{{ $book->id }}">Jenis</a>
-                                    </h5>
+                                        <a href="javascript:void(0)" class="btn btn-sm float-right mr-2 btn-warning delete" data-bs-target="{{ $book->id }}">Update Jenis</a>
+                                    </h5> 
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
                                         <?php $i = 1;
@@ -111,24 +111,15 @@
                                             <?php  ?>
                                             <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> <?= ($book->jenis_jawaban == 5) ? 'Buat Sub Pertanyaan' : 'Buat Pilihan'; ?> </button>
 
-                                            <?php
-                                            if ($book->jenis_jawaban != 1 || $book->jenis_jawaban != 4 || $book->jenis_jawaban != 5) {
-                                            ?>
-                                                <button type="button" class="btn btn-success btn-sm" data-id_pertanyaan="{{ $book->id }}" id="addOther" disabled> + Other </button>
-                                                <form action="javascript:void(0)" id="addOther" name="addOther" method="POST">
-                                                    <input type="hidden" name="id" id="id">
-                                                    <input type="hidden" name="id_pertanyaan_other" id="id_pertanyaan_other" value="{{ $book->id }}">
-                                                    <input type="hidden" name="pilihan_jawaban_other" id="pilihan_jawaban_other" value="other">
-
-                                                </form>
+                                            <button type="button" class="btn btn-success btn-sm" data-id_pertanyaan_other="{{ $book->id }}" id="addOther" > + Other </button>
 
                                         <?php
-                                            }
+
                                         endif;
                                         ?>
 
                                         <p class="card-text">Jenis jawaban: <?= $jenis[$book->jenis_jawaban] ?></p>
-                                        <a href="javascript:void(0)" class="btn float-right mr-2 btn-danger delete" data-id="{{ $book->id }}">Delete Jawaban</a>
+                                        <a href="javascript:void(0)" class="btn float-right mr-2 btn-secondary edit" data-id="{{ $book->id }}">Update Pertanyaan</a>
                                         <a href="javascript:void(0)" class="btn float-right btn-danger delete" data-id="{{ $book->id }}">Delete Pertanyaan</a>
                                     </div>
                                 </div><br>
@@ -325,11 +316,7 @@
         });
 
         $('#addNewPilihan').click(function() {
-            // $('#pertanyaan_ke').trigger("reset");
-            // $('#pertanyaan').trigger("reset");
-            // $('#ajaxNewPilihan').html("Add Pilihan");
             $('#ajax-new-pilihan').modal('show');
-            // $('#pilihan_jawaban').trigger("pilihan_jawaban");
         });
 
         // $('#addNewBook').click(function() {
@@ -341,9 +328,9 @@
         })
 
         $('body').on('click', '#addOther', function(event) {
-            var id = $("#id").val();
-            var id_pertanyaan = $("#id_pertanyaan_other").val();
-            var pilihan_jawaban = $("#pilihan_jawaban_other").val();
+            var id = '';
+            var id_pertanyaan = $(this).data('id_pertanyaan_other');
+            var pilihan_jawaban = 'other';
 
             // ajax
             $.ajax({
@@ -357,8 +344,6 @@
                 dataType: 'json',
                 success: function(res) {
                     window.location.reload();
-                    // $("#btn-save-pilihan").html('Submit');
-                    // $("#btn-save-pilihan").attr("disabled", false);
                 }
             });
         })
