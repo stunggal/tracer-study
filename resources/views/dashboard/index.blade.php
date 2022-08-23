@@ -42,7 +42,7 @@
                                 <i class="bi bi-people"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>$3,264</h6>
+                                <h6>{{ $dataArray['data_registeredUser'] }}</h6>
                                 <span class="text-success small pt-1 fw-bold"></span> <span
                                     class="text-muted small pt-2 ps-1">Users</span>
 
@@ -65,7 +65,7 @@
                                 <i class="bi bi-person-check"></i>
                             </div>
                             <div class="ps-3">
-                                <h6>1244</h6>
+                                <h6>{{ $dataArray['data_haveFilledOutTheForm'] }}</h6>
                                 <span class="text-danger small pt-1 fw-bold"></span> <span
                                     class="text-muted small pt-2 ps-1">People</span>
 

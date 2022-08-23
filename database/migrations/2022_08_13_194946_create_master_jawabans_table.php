@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('id_pertanyaan');
             $table->string('id_pilihan_jawaban');
             $table->string('jawaban');
-            $table->string('nim_mhs');
+            $table->string('user_id');
             $table->timestamps();
         });
     }
