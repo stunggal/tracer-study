@@ -72,6 +72,7 @@ use App\Models\form;
                                                         <?php endif; ?>
                                                     </label>
                                                     <input class="form-check-input" type="radio" name="{{ $pilih->id_pertanyaan }}" id="{{ $pilih->pilihan_jawaban }}" value="{{ $pilih->pilihan_jawaban }}">
+                                                    
                                                 </div>
                                             </div>
                                         <?php
@@ -119,10 +120,12 @@ use App\Models\form;
                                         @endif
                                         @endforeach
 
+                                        <button class="badge rounded-pill bg-primary p-2 ms-2 mt-4">Submit</button>
                                     </div>
                                 </div><br>
                                 <?php $i++ ?>
                                 @endforeach
+
 
                             </div>
 
@@ -139,4 +142,49 @@ use App\Models\form;
 
     </div>
 </section>
+
+<script>
+    $(document).ready(function($) {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $('body').on('click', '.save-record', function(event) {
+
+            var id = $("#id").val();
+            var pertanyaan_ke = $("#pertanyaan_ke").val();
+            var pertanyaan = $("#pertanyaan").val();
+            var jenis_jawaban = $("#jenis_jawaban").val();
+            var nim_mhs = $("#nim_mhs").val();
+
+            $("#btn-save").html('Please Wait...');
+            $("#btn-save").attr("disabled", true);
+
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: "{{ url('add-update-book') }}",
+                data: {
+                    id: id,
+                    pertanyaan_ke: pertanyaan_ke,
+                    pertanyaan: pertanyaan,
+                    jenis_jawaban: jenis_jawaban,
+                    nim_mhs: nim_mhs,
+                    // author: author,
+                },
+                dataType: 'json',
+                success: function(res) {
+                    window.location.reload();
+                    $("#btn-save").html('Submit');
+                    $("#btn-save").attr("disabled", false);
+                }
+            });
+
+        });
+
+    });
+</script>
 @endsection

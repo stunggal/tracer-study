@@ -22,7 +22,7 @@ class KuisionerController extends Controller
             'books' => $books,
             'pilihan' => $pilihan,
         ], [
-            'title' => 'Master Kuisioner',
+            'title' => 'Main Kuisioner',
         ]);
     }
 

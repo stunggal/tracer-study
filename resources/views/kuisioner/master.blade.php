@@ -78,7 +78,7 @@
 
                             <div class="container">
 
-                                <button type="button" class="btn btn-primary rounded bg-success p-1 ms-1 mb-3" data-bs-toggle="modal" data-bs-target="#addNewBook">
+                                <button type="button" class="badge rounded-pill bg-success p-2 ms-2 mb-3" data-bs-toggle="modal" data-bs-target="#addNewBook">
                                     Buat Pertanyaan
                                 </button>
 
@@ -90,8 +90,8 @@
                                 @include('layouts.modal-pilihan-input')
                                 <div class="card">
                                     <h5 class="card-header">Pertanyaan {{ $book->pertanyaan_ke }} | <?= $jenis[$book->jenis_jawaban] ?>
-                                        <a href="javascript:void(0)" class="btn btn-sm float-right mr-2 btn-warning delete" data-bs-target="{{ $book->id }}">Update Jenis</a>
-                                    </h5> 
+                                        <a href="javascript:void(0)" class="float-right mr-2 delete" data-bs-target="{{ $book->id }}"><span class="badge rounded-pill bg-warning  p-2 ms-2 ">Update Jenis</span></a>
+                                    </h5>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $book->pertanyaan }}</h5>
                                         <?php $i = 1;
@@ -101,7 +101,7 @@
                                             @foreach ($pilihan as $pilih)
                                             @if ($pilih->id_pertanyaan == $book->id)
                                             <div class="form-check">
-                                                <p><?= $i ?>. <a href="javascript:void(0)" class="btn btn-danger btn-sm delete-pilihan" data-id="{{ $pilih->id }}">Hapus</a> {{ $pilih->pilihan_jawaban }} </p>
+                                                <p><?= $i ?>. <a href="javascript:void(0)" class="delete-pilihan" data-id="{{ $pilih->id }}"><span class="badge rounded-pill bg-danger btn-sm ">Hapus</span></a> {{ $pilih->pilihan_jawaban }} </p>
 
                                             </div>
                                             <?php $i++ ?>
@@ -109,9 +109,9 @@
                                             @endforeach
 
                                             <?php  ?>
-                                            <button type="button" class="btn btn-primary btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> <?= ($book->jenis_jawaban == 5) ? 'Buat Sub Pertanyaan' : 'Buat Pilihan'; ?> </button>
+                                            <button type="button" class="badge rounded-pill bg-primary p-2 ms-2 btn-sm" data-id_pertanyaan="{{ $book->id }}" data-bs-toggle="modal" data-bs-target="#addNewPilihan" id="addNewPilihan"> <?= ($book->jenis_jawaban == 5) ? 'Buat Sub Pertanyaan' : 'Buat Pilihan'; ?> </button>
 
-                                            <button type="button" class="btn btn-success btn-sm" data-id_pertanyaan_other="{{ $book->id }}" id="addOther" > + Other </button>
+                                            <button type="button" class="badge rounded-pill bg-success p-2 ms-2 btn-sm" data-id_pertanyaan_other="{{ $book->id }}" id="addOther"> + Other </button>
 
                                         <?php
 
@@ -119,14 +119,15 @@
                                         ?>
 
                                         <p class="card-text">Jenis jawaban: <?= $jenis[$book->jenis_jawaban] ?></p>
-                                        <a href="javascript:void(0)" class="btn float-right mr-2 btn-secondary edit" data-id="{{ $book->id }}">Update Pertanyaan</a>
-                                        <a href="javascript:void(0)" class="btn float-right btn-danger delete" data-id="{{ $book->id }}">Delete Pertanyaan</a>
+                                        <a href="javascript:void(0)" class="float-right mr-2 edit" data-id="{{ $book->id }}"><span class="badge rounded-pill bg-secondary p-2 ms-2 ">Update Pertanyaan</span></a>
+                                        <a href="javascript:void(0)" class="float-right delete" data-id="{{ $book->id }}"><span class="badge rounded-pill bg-danger p-2 ms-2 ">Delete Pertanyaan</span></a>
                                     </div>
-                                </div><br>
+                                </div>
+                                <br>
                                 <?php $i++ ?>
                                 @endforeach
                                 <div class="col-md-12 mt-1 mb-2 text-center rounded">
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addNewBook">
+                                    <button type="button" class="badge rounded-pill bg-success p-2 ms-2" data-bs-toggle="modal" data-bs-target="#addNewBook">
                                         <i class="ri-add-circle-line"></i></button>
                                     </button>
                                 </div>
@@ -289,10 +290,6 @@
 
         });
 
-
-
-
-
         $('body').on('click', '.delete-pilihan', function() {
 
             if (confirm("Delete Record?") == true) {
@@ -319,7 +316,6 @@
             $('#ajax-new-pilihan').modal('show');
         });
 
-        // $('#addNewBook').click(function() {
         $(document).on('click', "#addNewPilihan", function() {
 
             var id_pertanyaan = $(this).data('id_pertanyaan');

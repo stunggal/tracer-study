@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('pertanyaan_ke');
             $table->string('pertanyaan');
             $table->string('jenis_jawaban');
-            // $table->string('nim_mhs');
             $table->timestamps();
         });
     }
