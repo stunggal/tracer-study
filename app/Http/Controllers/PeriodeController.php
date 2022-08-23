@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dashboard;
-use App\Models\User;
+use App\Models\periode;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class PeriodeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,21 +14,15 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $data_users = User::all();
+        $periode = periode::orderBy('periode')->get();
 
-        $data_registeredUser = $data_users->count();
-        $data_haveFilledOutTheForm = $data_users->where('isFilledOutTheForm', '1')->count();
-
-        $dataArray = [];
-        // array_push($dataArray, 'data_registeredUser' => $data_registeredUser, $data_haveFilledOutTheForm);
-        $dataArray['data_registeredUser'] = $data_registeredUser;
-        $dataArray['data_haveFilledOutTheForm'] = $data_haveFilledOutTheForm;
-
-        // return dahsboard.index
-        return view('dashboard.index', [
-            'title' => 'Dashboard',
-            'dataArray' => $dataArray,
-        ]);
+        return view(
+            'periode.index',
+            [
+                'title' => 'Periode',
+                'periodes' => $periode,
+            ]
+        );
     }
 
     /**
@@ -56,10 +49,10 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\dashboard  $dashboard
+     * @param  \App\Models\periode  $periode
      * @return \Illuminate\Http\Response
      */
-    public function show(dashboard $dashboard)
+    public function show(periode $periode)
     {
         //
     }
@@ -67,10 +60,10 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\dashboard  $dashboard
+     * @param  \App\Models\periode  $periode
      * @return \Illuminate\Http\Response
      */
-    public function edit(dashboard $dashboard)
+    public function edit(periode $periode)
     {
         //
     }
@@ -79,10 +72,10 @@ class DashboardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\dashboard  $dashboard
+     * @param  \App\Models\periode  $periode
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, dashboard $dashboard)
+    public function update(Request $request, periode $periode)
     {
         //
     }
@@ -90,10 +83,10 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\dashboard  $dashboard
+     * @param  \App\Models\periode  $periode
      * @return \Illuminate\Http\Response
      */
-    public function destroy(dashboard $dashboard)
+    public function destroy(periode $periode)
     {
         //
     }

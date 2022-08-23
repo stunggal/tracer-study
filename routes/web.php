@@ -8,6 +8,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KuisionerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AjaxFORMCRUDController;
+use App\Http\Controllers\PeriodeController;
+use App\Models\periode;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +37,9 @@ Route::get('/profile', [ProfileController::class, 'index']);
 
 // show profile resource routes
 Route::get('/profile/show', [ProfileController::class, 'show']);
+
+// periode route
+Route::get('/periode', [PeriodeController::class, 'index']);
 
 
 // - ROUTE KUISIONER CLIENT -
