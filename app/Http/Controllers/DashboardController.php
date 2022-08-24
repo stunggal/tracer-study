@@ -17,11 +17,16 @@ class DashboardController extends Controller
     {
         $data_users = User::all();
 
+        // section 0
         $data_registeredUser = $data_users->count();
         $data_haveFilledOutTheForm = $data_users->where('isFilledOutTheForm', '1')->count();
 
-        $dataArray = [];
-        // array_push($dataArray, 'data_registeredUser' => $data_registeredUser, $data_haveFilledOutTheForm);
+        // section 1 & 2
+        // graduated
+        $data_valueGraduated_ =
+
+
+            $dataArray = [];
         $dataArray['data_registeredUser'] = $data_registeredUser;
         $dataArray['data_haveFilledOutTheForm'] = $data_haveFilledOutTheForm;
 
