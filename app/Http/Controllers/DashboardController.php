@@ -23,12 +23,33 @@ class DashboardController extends Controller
 
         // section 1 & 2
         // graduated
-        $data_valueGraduated_ =
+        $data_parameterTahunAll = [];
+        foreach ($data_users as $data) {
+            array_push($data_parameterTahunAll, $data->tahun_lulus);
+        }
+        $data_parameterTahun = array_unique($data_parameterTahunAll);
+        asort($data_parameterTahun);
+        $data_graduated_tahun = [];
+        $data_graduated_value = [];
+        foreach ($data_parameterTahun as $data) {
+            $count_data_tahun = $data_users->where('tahun_lulus', $data)->count();
+            array_push($data_graduated_tahun, $data);
+            array_push($data_graduated_value, $count_data_tahun);
+
+            // $data
+        }
+
+        // return $data_graduated_tahun;
 
 
-            $dataArray = [];
+
+
+        $dataArray = [];
         $dataArray['data_registeredUser'] = $data_registeredUser;
         $dataArray['data_haveFilledOutTheForm'] = $data_haveFilledOutTheForm;
+        $dataArray['data_parameterTahun'] = $data_parameterTahun;
+        $dataArray['data_graduated_value'] = $data_graduated_value;
+        $dataArray['data_graduated_tahun'] = $data_graduated_tahun;
 
         // return dahsboard.index
         return view('dashboard.index', [
