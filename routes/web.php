@@ -38,10 +38,6 @@ Route::get('/profile', [ProfileController::class, 'index']);
 // show profile resource routes
 Route::get('/profile/show', [ProfileController::class, 'show']);
 
-// periode route
-Route::get('/periode', [PeriodeController::class, 'index']);
-Route::post('/periode', [PeriodeController::class, 'store']);
-
 
 // - ROUTE KUISIONER CLIENT -
 

@@ -23,7 +23,7 @@ class UserFactory extends Factory
             'nim' => $this->faker->unique()->numerify('402029622-###'),
             'username' => $this->faker->word(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'tahun_lulus' => $this->faker->numberBetween(2018, 2024),
+            'tahun_lulus' => $this->faker->numberBetween(2014, 2024),
             'isFilledOutTheForm' => $this->faker->boolean(),
             'program_studi' => $this->faker->randomElement(['pai', 'pba', 'tbi', 'saa', 'afi', 'iqt', 'pm', 'hes', 'mnj', 'ei', 'agro', 'ti', 'tip', 'hi', 'ilkom', 'kkk', 'farmasi', 'gizi'])
         ];
