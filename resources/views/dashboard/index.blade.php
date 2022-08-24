@@ -120,12 +120,20 @@
                                 <!-- Line Chart -->
                                 <div id="reportsChart"></div>
 
+
+
+
+
                                 <script>
                                     document.addEventListener("DOMContentLoaded", () => {
                                         new ApexCharts(document.querySelector("#reportsChart"), {
                                             series: [{
                                                 name: 'Graduation',
-                                                data: [331, 340, 328, 351, 342, 382, 356],
+                                                data: [
+                                                    @foreach ($dataArray['data_graduated_value'] as $item)
+                                                        {{ $item }},
+                                                    @endforeach
+                                                ],
                                             }],
                                             chart: {
                                                 height: 350,
@@ -156,10 +164,10 @@
                                             },
                                             xaxis: {
                                                 type: 'year',
-                                                categories: ["2018", "2019",
-                                                    "2020", "2021",
-                                                    "2022", "2023",
-                                                    "2024"
+                                                categories: [
+                                                    @foreach ($dataArray['data_graduated_tahun'] as $item)
+                                                        {{ $item }},
+                                                    @endforeach
                                                 ]
                                             },
                                             tooltip: {

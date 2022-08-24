@@ -24,6 +24,5 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         User::factory(100)->create();
-        periode::factory(7)->create();
     }
 }
