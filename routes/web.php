@@ -40,6 +40,7 @@ Route::get('/profile/show', [ProfileController::class, 'show']);
 
 // periode route
 Route::get('/periode', [PeriodeController::class, 'index']);
+Route::post('/periode', [PeriodeController::class, 'store']);
 
 
 // - ROUTE KUISIONER CLIENT -
