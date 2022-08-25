@@ -202,8 +202,10 @@
                                                 ],
                                                 datasets: [{
                                                     label: 'Line Chart',
-                                                    data: [65, 59, 80, 81, 56, 55, 40, 75, 72, 78, 80, 90, 100, 80, 90, 100, 80,
-                                                        90, 100,
+                                                    data: [
+                                                        @foreach ($dataArray['dataYangUdahNgisiFormPerProdi'] as $item)
+                                                            {{ $item }},
+                                                        @endforeach
                                                     ],
                                                     fill: false,
                                                     borderColor: 'rgb(75, 192, 192)',

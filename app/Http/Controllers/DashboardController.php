@@ -35,11 +35,16 @@ class DashboardController extends Controller
             $count_data_tahun = $data_users->where('tahun_lulus', $data)->count();
             array_push($data_graduated_tahun, $data);
             array_push($data_graduated_value, $count_data_tahun);
-
-            // $data
         }
 
-        // return $data_graduated_tahun;
+        $dataYangUdahNgisiFormPerProdi = [];
+        $prodiArray = ['saa', 'afi', 'iqt', 'pai', 'pba', 'tbi', 'pm', 'hes', 'mnj', 'ei', 'hi', 'ilkom', 'ti', 'agro', 'tip', 'farmasi', 'gizi', 'kkk'];
+        foreach ($prodiArray as $item) {
+            $dataValueUdahNgisiForm = $data_users->where('program_studi', $item);
+            array_push($dataYangUdahNgisiFormPerProdi, count($dataValueUdahNgisiForm));
+        }
+
+        // return $dataYangUdahNgisiFormPerProdi;
 
 
 
@@ -50,6 +55,7 @@ class DashboardController extends Controller
         $dataArray['data_parameterTahun'] = $data_parameterTahun;
         $dataArray['data_graduated_value'] = $data_graduated_value;
         $dataArray['data_graduated_tahun'] = $data_graduated_tahun;
+        $dataArray['dataYangUdahNgisiFormPerProdi'] = $dataYangUdahNgisiFormPerProdi;
 
         // return dahsboard.index
         return view('dashboard.index', [
