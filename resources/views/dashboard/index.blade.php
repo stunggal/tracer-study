@@ -119,11 +119,6 @@
 
                                 <!-- Line Chart -->
                                 <div id="reportsChart"></div>
-
-
-
-
-
                                 <script>
                                     document.addEventListener("DOMContentLoaded", () => {
                                         new ApexCharts(document.querySelector("#reportsChart"), {

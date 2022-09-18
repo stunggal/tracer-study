@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link {{ ($title === 'Dashboard') ? '' : 'collapsed' }}" href="/">
+            <a class="nav-link {{ $title === 'Dashboard' ? '' : 'collapsed' }}" href="/">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -24,14 +24,22 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link {{ ($title === 'Kuisioner') ? '' : 'collapsed' }}" href="/kuisioner">
+            <a class="nav-link {{ $title === 'Kuisioner' ? '' : 'collapsed' }}" href="/kuisioner">
                 <i class="bi bi-book"></i>
                 <span>Kuisioner</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link {{ ($title === 'Master Kuisioner') ? '' : 'collapsed' }}" data-bs-target="#forms-master" data-bs-toggle="collapse" href="#">
+            <a class="nav-link {{ $title === 'pertanyaan' ? '' : 'collapsed' }}" href="/pertanyaan">
+                <i class="bi bi-book"></i>
+                <span>Pertanyaan</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ $title === 'Master Kuisioner' ? '' : 'collapsed' }}" data-bs-target="#forms-master"
+                data-bs-toggle="collapse" href="#">
                 <i class="bi bi-kanban"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="forms-master" class="nav-content collapse " data-bs-parent="#sidebar-nav">
