@@ -14,5 +14,6 @@ class pertanyaan extends Model
         'jenis',
         'section',
         'nomor',
+        'deskripsi',
     ];
 }

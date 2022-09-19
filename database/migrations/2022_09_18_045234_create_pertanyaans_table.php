@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nomor');
             $table->string('jenis');
             $table->string('section');
+            $table->string('deskripsi')->nullable();
             $table->timestamps();
         });
     }

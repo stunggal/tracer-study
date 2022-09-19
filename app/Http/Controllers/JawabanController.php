@@ -35,7 +35,13 @@ class JawabanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'pertanyaan_id' => 'required',
+            'nomor' => 'required',
+            'jawaban' => 'required',
+        ]);
+        jawaban::create($validatedData);
+        return redirect('/pertanyaan')->with('success', 'jawaban telah ditambahkan');
     }
 
     /**
@@ -80,6 +86,7 @@ class JawabanController extends Controller
      */
     public function destroy(jawaban $jawaban)
     {
-        //
+        $jawaban->delete();
+        return redirect('/pertanyaan')->with('success', 'Pertanyaan telah dihapus');
     }
 }

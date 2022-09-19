@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\jawaban;
 use App\Models\pertanyaan;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,8 @@ class PertanyaanController extends Controller
         $pertanyaansSection8 = $pertanyaans->where('section', '8')->sortBy('nomor');
         $pertanyaansSection9 = $pertanyaans->where('section', '9')->sortBy('nomor');
 
+        $jawabans = jawaban::all()->sortBy('nomor');
+
 
 
         // return view('ajax-book-crud',$data);
@@ -40,6 +43,7 @@ class PertanyaanController extends Controller
             'pertanyaansSection7' => $pertanyaansSection7,
             'pertanyaansSection8' => $pertanyaansSection8,
             'pertanyaansSection9' => $pertanyaansSection9,
+            'jawabans' => $jawabans,
         ]);
     }
 
@@ -66,7 +70,7 @@ class PertanyaanController extends Controller
             'pertanyaan' => 'required',
             'section' => 'required',
             'nomor' => 'required',
-            'jenis' => 'in:paragraf,radio,combo,text,range'
+            'jenis' => 'in:paragraf,radio,combo,text,range',
         ]);
         pertanyaan::create($validaterdData);
         return redirect('/pertanyaan')->with('success', 'Pertanyaan berhasil ditambahkan');
@@ -103,7 +107,15 @@ class PertanyaanController extends Controller
      */
     public function update(Request $request, pertanyaan $pertanyaan)
     {
-        //
+        $validatedData = $request->validate([
+            'nomor' => 'required',
+            'pertanyaan' => 'required',
+            'section' => 'required',
+            'jenis' => 'in:paragraf,radio,combo,text,range',
+        ]);
+        $validatedData['deskripsi'] = $request['deskripsi'];
+        $pertanyaan->update($validatedData);
+        return redirect('/pertanyaan')->with('success', 'Pertanyaan telah diupdate');
     }
 
     /**
