@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KuisionerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AjaxFORMCRUDController;
+use App\Http\Controllers\JawabanController;
 use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\PertanyaanController;
 use App\Models\periode;
@@ -43,6 +44,10 @@ Route::get('/profile/show', [ProfileController::class, 'show']);
 Route::get('/pertanyaan', [PertanyaanController::class, 'index']);
 Route::post('/pertanyaan', [PertanyaanController::class, 'store']);
 Route::post('/pertanyaan/delete/{pertanyaan}', [PertanyaanController::class, 'destroy']);
+Route::post('/pertanyaan/update/{pertanyaan}', [PertanyaanController::class, 'update']);
+
+Route::post('/jawaban', [JawabanController::class, 'store']);
+Route::post('/jawaban/delete/{jawaban}', [JawabanController::class, 'destroy']);
 
 
 
