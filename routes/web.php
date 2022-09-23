@@ -9,6 +9,7 @@ use App\Http\Controllers\KuisionerController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AjaxFORMCRUDController;
 use App\Http\Controllers\JawabanController;
+use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\PertanyaanController;
 use App\Models\periode;
@@ -49,6 +50,7 @@ Route::post('/pertanyaan/update/{pertanyaan}', [PertanyaanController::class, 'up
 Route::post('/jawaban', [JawabanController::class, 'store']);
 Route::post('/jawaban/delete/{jawaban}', [JawabanController::class, 'destroy']);
 
+Route::get('/kuesioner', [KuesionerController::class, 'index']);
 
 
 
