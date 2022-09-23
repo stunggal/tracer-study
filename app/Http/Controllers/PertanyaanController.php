@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\jawaban;
 use App\Models\pertanyaan;
+use App\Models\section;
 use Illuminate\Http\Request;
 
 class PertanyaanController extends Controller
@@ -29,11 +30,14 @@ class PertanyaanController extends Controller
 
         $jawabans = jawaban::all()->sortBy('nomor');
 
+        $section = section::all();
+
 
 
         // return view('ajax-book-crud',$data);
         return view('pertanyaan.index', [
             'title' => 'Master Kuisioner',
+            'pertanyaans' => $pertanyaans,
             'pertanyaansSection1' => $pertanyaansSection1,
             'pertanyaansSection2' => $pertanyaansSection2,
             'pertanyaansSection3' => $pertanyaansSection3,
@@ -44,6 +48,7 @@ class PertanyaanController extends Controller
             'pertanyaansSection8' => $pertanyaansSection8,
             'pertanyaansSection9' => $pertanyaansSection9,
             'jawabans' => $jawabans,
+            'section' => $section,
         ]);
     }
 

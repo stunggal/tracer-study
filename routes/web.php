@@ -12,6 +12,7 @@ use App\Http\Controllers\JawabanController;
 use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\SectionController;
 use App\Models\periode;
 use App\Models\pertanyaan;
 use Illuminate\Support\Facades\Route;
@@ -86,3 +87,8 @@ Route::post('delete-pilihan', [AjaxFORMCRUDController::class, 'destroyPilihan'])
 
 // error resource routes
 Route::get('/{any}', [error::class, 'index']);
+
+
+
+
+Route::post('/section', [SectionController::class, 'store']);
