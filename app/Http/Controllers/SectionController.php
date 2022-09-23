@@ -85,6 +85,8 @@ class SectionController extends Controller
      */
     public function destroy(section $section)
     {
-        //
+        // echo '<pre>';print_r($section);exit;
+        $section->delete();
+        return redirect('/pertanyaan')->with('success', 'Section telah dihapus');
     }
 }

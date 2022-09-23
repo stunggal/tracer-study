@@ -60,9 +60,15 @@
                             </div>
                             @endif
 
+                            <button type="button" class="btn btn-success mb-5" data-bs-toggle="modal" data-bs-target="#buatSection">
+                                Buat Section
+                            </button>
+
                             <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#buatPertanyaan">
                                 Buat pertanyaan
                             </button>
+
+
                             <div class="modal fade" id="buatPertanyaan" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
@@ -132,9 +138,7 @@
                                 </div>
                             </div><!-- End Vertically centered Modal-->
 
-                            <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#buatSection">
-                                Buat Section
-                            </button>
+
 
                             <div class="modal fade" id="buatSection" tabindex="-1">
                                 <div class="modal-dialog modal-lg">
@@ -178,7 +182,12 @@
                             ?>
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title ">{{ $s->nama_section }}<span> / {{ $s->keterangan_section }} </span></h5>
+                                    <h5 class="card-title ">{{ $s->nama_section }}<span> / {{ $s->keterangan_section }} </span> <a href="javascript:void(0)" onclick="document.getElementById('delsec').submit()" class="float-end btn btn-sm btn-danger">Hapus Section</a> </h5>
+
+
+                                    <form id="delsec" action="/section/delete/{{ $s->id }}" method="post">
+                                        @csrf
+                                    </form>
                                     @foreach ($pertanyaanss as $pertanyaan)
 
                                     <h5 class="card-title">{{ $pertanyaan->nomor }}. {{ $pertanyaan->pertanyaan }}
