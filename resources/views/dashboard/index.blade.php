@@ -78,16 +78,19 @@
             </div><!-- End Customers Card -->
         </div>
 
-        <!-- section 1 & 2 -->
-        <div class="col-md-12">
-            <div class="card info-card sales-card">
-                <div class="card-body">
-                    <h1 class="card-title d-flex justify-content-center">SECTION 1 & 2</h1>
-                    <div class="d-flex align-items-center">
+        @foreach ($sections as $section)
+            <!-- section 1 & 2 -->
+            <div class="col-md-12">
+                <div class="card info-card sales-card">
+                    <div class="card-body">
+                        <h1 class="card-title d-flex justify-content-center">SECTION {{ $section->nama_section }}
+                            : {{ $section->keterangan_section }}</h1>
+                        <div class="d-flex align-items-center">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
 
         <div class="row">
             <!-- Left side columns -->

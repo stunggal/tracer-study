@@ -23,7 +23,7 @@
                                         <i class="bi bi-check2-all"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6 class="text-primary"><?= $books->count() ?></h6>
+                                        <h6 class="text-primary"><?= $sections->count() ?></h6>
                                         <span class="text-success small pt-1 fw-bold"></span> <span
                                             class="text-muted small pt-2 ps-1">Quis</span>
 
@@ -104,19 +104,23 @@
                                 <div class="container">
                                     <div class="row">
 
-                                        <div class="col-sm-4">
-                                            <div class="card">
-                                                <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg"
-                                                    class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Main Kuisioner</h5>
-                                                    <p class="card-text">Mari kita isi kuisioner tracer studi untuk menuju
-                                                        unida unggul 2025</p>
-                                                    <a href="quiz-main"><span
-                                                            class="badge rounded-pill bg-primary p-2 ms-2">Mulai</span></a>
+                                        @foreach ($sections as $section)
+                                            <div class="col-sm-4">
+                                                <div class="card">
+                                                    <img src="https://pbs.twimg.com/media/FMWTDXJVEAExU7y.jpg"
+                                                        class="card-img-top" alt="...">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{ $section->nama_section }} :
+                                                            {{ $section->keterangan_section }}</h5>
+                                                        <p class="card-text">Mari kita isi kuisioner tracer studi untuk
+                                                            menuju
+                                                            unida unggul 2025</p>
+                                                        <a href="/quiz/{{ $section->nama_section }}"><span
+                                                                class="badge rounded-pill bg-primary p-2 ms-2">Mulai</span></a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endforeach
 
                                     </div>
                                 </div>

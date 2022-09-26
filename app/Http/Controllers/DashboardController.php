@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\dashboard;
+use App\Models\section;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,8 @@ class DashboardController extends Controller
     public function index()
     {
         $data_users = User::all();
+
+        $sections = section::all();
 
         // section 0
         $data_registeredUser = $data_users->count();
@@ -61,6 +64,7 @@ class DashboardController extends Controller
         return view('dashboard.index', [
             'title' => 'Dashboard',
             'dataArray' => $dataArray,
+            'sections' => $sections,
         ]);
     }
 

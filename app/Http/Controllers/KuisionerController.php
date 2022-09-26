@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\form;
+use App\Models\section;
 use App\Models\sub_jawaban;
 
 class KuisionerController extends Controller
@@ -36,5 +37,4 @@ class KuisionerController extends Controller
             'title' => 'Kuisioner',
         ]);
     }
-
 }

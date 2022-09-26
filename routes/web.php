@@ -53,6 +53,9 @@ Route::post('/jawaban/delete/{jawaban}', [JawabanController::class, 'destroy']);
 
 Route::get('/kuesioner', [KuesionerController::class, 'index']);
 
+Route::get('/quiz', [KuesionerController::class, 'index']);
+Route::get('/quiz/{section}', [KuesionerController::class, 'pertanyaan']);
+
 
 
 // - ROUTE KUISIONER CLIENT -
