@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\form;
+use App\Models\jawaban;
 use App\Models\kuesioner;
+use App\Models\pertanyaan;
+use App\Models\section;
 use Illuminate\Http\Request;
 
 class KuesionerController extends Controller
@@ -15,11 +18,26 @@ class KuesionerController extends Controller
      */
     public function index()
     {
-        $books = form::orderBy('pertanyaan_ke', 'asc')->paginate(150);
+        $sections = section::all();
 
         return view('kuesioner.index', [
-            'books' => $books,
+            'sections' => $sections,
             'title' => 'Kuisioner',
+        ]);
+    }
+
+    public function pertanyaan($section)
+    {
+        $pertanyaans = pertanyaan::where('section', $section)->get();
+        $jawabans = jawaban::all()->sortBy('nomor');
+        $sections = section::all();
+
+        return view('kuisioner.quis-main', [
+            'title' => 'Main Kuisioner',
+            'pertanyaans' => $pertanyaans,
+            'section' => $sections,
+            'jawabans' => $jawabans,
+            'nomorsection' => $section,
         ]);
     }
 
