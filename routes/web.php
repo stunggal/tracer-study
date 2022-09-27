@@ -99,3 +99,5 @@ Route::get('/{any}', [error::class, 'index']);
 Route::post('/section', [SectionController::class, 'store']);
 
 Route::post('/section/delete/{section}', [SectionController::class, 'destroy']);
+
+Route::post('/section/update/{section}', [SectionController::class, 'update']);

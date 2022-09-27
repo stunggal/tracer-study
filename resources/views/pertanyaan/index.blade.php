@@ -152,6 +152,12 @@
                                             <div class="modal-body">
 
                                                 <div class="row mb-3">
+                                                    <label for="nama_section" class="col-sm-3 col-form-label">Nomor Section</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="number" class="form-control" id="nomor" name="nomor" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
                                                     <label for="nama_section" class="col-sm-3 col-form-label">Nama Section</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" class="form-control" id="nama_section" name="nama_section" required>
@@ -182,12 +188,60 @@
                             ?>
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title ">{{ $s->nama_section }}<span> / {{ $s->keterangan_section }} </span> <a href="javascript:void(0)" onclick="document.getElementById('delsec').submit()" class="float-end btn btn-sm btn-danger">Hapus Section</a> </h5>
+                                    <h5 class="card-title ">
+                                        Bagian {{ $s->nomor }} : {{ $s->nama_section }}
+                                        <a href="javascript:void(0)" onclick="document.getElementById('delsec').submit()" class="float-end btn btn-sm btn-danger">Hapus Section</a>
+                                        <button type="button" class="float-end btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editSection{{ $s->id }}">
+                                            Edit pertanyaan
+                                        </button>
+                                        <br> <span> {{ $s->keterangan_section }} </span>
+                                    </h5>
+                                    <div class="modal fade" id="editSection{{ $s->id }}" tabindex="-1">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Buat Section</h5>
+                                                </div>
+                                                <form class="row g-3 needs-validation" action="/section/update/{{ $s->id }}" method="post" novalidate>
+                                                    @csrf
+
+                                                    <div class="modal-body">
+
+                                                        <div class="row mb-3">
+                                                            <label for="nama_section" class="col-sm-3 col-form-label">Nomor Section</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="number" class="form-control" id="nomor" name="nomor" value="{{ $s->nomor }}" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <label for="nama_section" class="col-sm-3 col-form-label">Nama Section</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" id="nama_section" name="nama_section" value="{{ $s->nama_section }}" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <label for="keterangan_section" class="col-sm-3 col-form-label">Keterangan Section</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control" id="keterangan_section" name="keterangan_section" value="{{ $s->keterangan_section }}" required>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Save
+                                                                changes</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div><!-- End Vertically centered Modal-->
 
 
                                     <form id="delsec" action="/section/delete/{{ $s->id }}" method="post">
                                         @csrf
                                     </form>
+
                                     @foreach ($pertanyaanss as $pertanyaan)
 
                                     <h5 class="card-title">{{ $pertanyaan->nomor }}. {{ $pertanyaan->pertanyaan }}
@@ -301,7 +355,7 @@
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">tambah jawaban untuk nomor
+                                                    <h5 class="modal-title">Tambah jawaban untuk nomor
                                                         {{ $pertanyaan->nomor }}
                                                     </h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -310,22 +364,18 @@
                                                     @csrf
                                                     <input type="hidden" name="pertanyaan_id" value="{{ $pertanyaan->id }}">
                                                     <div class="modal-body">
-                                                        <div class="col-md-4">
-                                                            <label for="nomor" class="form-label">Nomor</label>
-                                                            <div class="input-group has-validation">
-                                                                <input type="number" class="form-control" id="nomor" aria-describedby="inputGroupPrepend" name="nomor" required>
-                                                                <div class="invalid-feedback">
-                                                                    mohon masukkan nomor.
-                                                                </div>
+                                                        
+                                                        <div class="row mb-3">
+                                                            <label for="nomor" class="col-sm-3 col-form-label">Nomor</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="hidden" class="form-control" id="nomor" aria-describedby="inputGroupPrepend" name="nomor" value="{{ $pertanyaan->nomor }}" required>
+                                                                <input type="number" class="form-control" aria-describedby="inputGroupPrepend"  value="{{ $pertanyaan->nomor }}" disabled>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <label for="jawaban" class="form-label">Jawaban</label>
-                                                            <div class="input-group has-validation">
+                                                        <div class="row mb-3">
+                                                            <label for="jawaban" class="col-sm-3 col-form-label">Jawaban</label>
+                                                            <div class="col-sm-9">
                                                                 <input type="text" class="form-control" id="jawaban" aria-describedby="inputGroupPrepend" name="jawaban" required>
-                                                                <div class="invalid-feedback">
-                                                                    mohon masukkan jawaban.
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

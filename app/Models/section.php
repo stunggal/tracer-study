@@ -10,6 +10,7 @@ class section extends Model
     use HasFactory;
 
     protected  $fillable = [
+        'nomor',
         'nama_section',
         'keterangan_section'
     ];

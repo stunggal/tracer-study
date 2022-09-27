@@ -36,13 +36,14 @@ class SectionController extends Controller
     public function store(Request $request)
     {
         $validaterdData = $request->validate([
+            'nomor' => 'required',
             'nama_section' => 'required',
             'keterangan_section' => 'required',
         ]);
         section::create($validaterdData);
-        return redirect('/pertanyaan')->with('success', 'Pertanyaan berhasil ditambahkan');
+        return redirect('/pertanyaan')->with('success', 'Section berhasil ditambahkan');
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -53,7 +54,7 @@ class SectionController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -64,7 +65,7 @@ class SectionController extends Controller
     {
         //
     }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -74,9 +75,16 @@ class SectionController extends Controller
      */
     public function update(Request $request, section $section)
     {
-        //
+        $validatedData = $request->validate([
+            'nomor' => 'required',
+            'nama_section' => 'required',
+            'keterangan_section' => 'required',
+        ]);
+        // $validatedData['deskripsi'] = $request['deskripsi'];
+        $section->update($validatedData);
+        return redirect('/pertanyaan')->with('success', 'Section telah diupdate');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      *

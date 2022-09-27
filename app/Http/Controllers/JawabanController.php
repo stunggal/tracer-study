@@ -35,6 +35,7 @@ class JawabanController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         $validatedData = $request->validate([
             'pertanyaan_id' => 'required',
             'nomor' => 'required',
