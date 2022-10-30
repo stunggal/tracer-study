@@ -12,6 +12,7 @@ use App\Http\Controllers\JawabanController;
 use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\PeriodeController;
 use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\ResponController;
 use App\Http\Controllers\SectionController;
 use App\Models\periode;
 use App\Models\pertanyaan;
@@ -56,6 +57,8 @@ Route::get('/kuesioner', [KuesionerController::class, 'index']);
 Route::get('/quiz', [KuesionerController::class, 'index']);
 Route::get('/quiz/{section}', [KuesionerController::class, 'pertanyaan']);
 
+Route::get('/respon', [ResponController::class, 'index']);
+Route::get('/respon/{section}', [ResponController::class, 'perSection']);
 
 
 // - ROUTE KUISIONER CLIENT -
