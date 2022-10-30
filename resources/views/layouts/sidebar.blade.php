@@ -23,24 +23,24 @@
             </ul>
         </li> -->
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link {{ $title == 'Kuisioner' ? '' : 'collapsed' }}" href="/kuisioner">
                 <i class="bi bi-book"></i>
                 <span>Kuisioner</span>
             </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link {{ $title == 'pertanyaan' ? '' : 'collapsed' }}" href="/pertanyaan">
-                <i class="bi bi-book"></i>
-                <span>Pertanyaan</span>
-            </a>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
             <a class="nav-link {{ $title == 'Kuesioner' ? '' : 'collapsed' }}" href="/kuesioner">
                 <i class="bi bi-book"></i>
                 <span>Kuesioner</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {{ $title === 'Respon' ? '' : 'collapsed' }}" href="/respon">
+                <i class="bi bi-book"></i>
+                <span>Respon</span>
             </a>
         </li>
 
@@ -51,8 +51,8 @@
             </a>
             <ul id="forms-master" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/master-kuisioner">
-                        <i class="bi bi-chevron-right"></i><span>Manage Kuisioner</span>
+                    <a href="/pertanyaan">
+                        <i class="bi bi-chevron-right"></i><span>Manage Pertanyaan</span>
                     </a>
                 </li>
                 <li>
